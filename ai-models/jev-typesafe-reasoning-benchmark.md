@@ -463,6 +463,68 @@ harder for Jev even when it lands on the right answer.
 
 ---
 
+## Round 9: Surprising Facts & Many-Option Comparisons
+
+This round's 8 test questions came from the user's own independent testing, shared as raw
+results. Rather than take them at face value, each was rerun **6 times live** against
+`/v1/systemone` to check reproducibility — both to confirm the reported misses and because
+earlier rounds showed real run-to-run variance on borderline items.
+
+Two question shapes, both new to this benchmark: **surprising geographic/spatial facts**
+(binary choice) and **"which is largest/most likely" comparisons among six options** (not
+four, and not multiple-choice-with-obvious-structure like the SAT items).
+
+| Question | Correct | Jev picked (all/most reruns) | Result | Confidence range |
+|---|---|---|---|---|
+| Closer to Santiago, Chile: Los Angeles or Toronto? | Toronto (~8,619 km vs ~8,998 km) | Los Angeles | ❌ 0/6 | 0.87–0.91 |
+| Farther east by longitude: Los Angeles or Reno? | Los Angeles | Reno | ❌ 0/6 | 0.66–0.77 |
+| Farther north by latitude: Rome or New York City? | Rome (41.9°N vs 40.7°N) | New York City | ❌ 0/6 | **0.98** |
+| Farther south: Canada or metropolitan France? | Metropolitan France | Metropolitan France | ✅ 6/6 | 0.31–0.50 |
+| Most likely dice event (6 options) | At least one six (11/36) | Sum to seven (6/36) | ❌ 0/6 | 0.93–0.95 |
+| Greatest mass (6 options, unit conversions) | 1 kilogram (vs. 2.2 lb ≈ 0.998 kg) | 2.2 pounds | ❌ 0/6 | 0.66–0.73 |
+| Largest amount, penny doubling 15 days (6 options) | The doubled penny ($163.84) | The doubled penny | ✅ 6/6 | 0.54–0.67 |
+| Largest count: 3^6, 6!, 2^9, 4^4, 5!, 10^2 (6 options) | 3^6 = 729 | 6! = 720 | ❌ 0/6 | 0.38–0.47 |
+
+**6 of 8 are robust, repeatable misses** — by far the highest failure rate of any round in
+this benchmark, and a sharp contrast with round 6, where Jev resisted comparably "surprising"
+facts (9.11 vs. 9.9, Monty Hall, base-rate neglect) every time. The two that didn't reproduce
+as failures are worth being honest about: **Canada vs. France** went 6/6 *correct* in these
+reruns despite the user's originally-reported miss — its confidence (0.31–0.50) is low enough
+that a single wrong call amid mostly-correct behavior is plausible, genuine instability rather
+than a contradiction. **Penny doubling** also went 6/6 correct here versus the user's reported
+"$160" — this one is a real discrepancy rather than an instability story (confidence 0.54–0.67
+isn't as marginal), most likely explained by a wording difference between this run's exact
+phrasing and whatever the original test used; it's flagged rather than quietly dropped.
+
+**Two results stand out:**
+
+- **Rome vs. NYC latitude, wrong at 0.98 confidence, 6/6 times** — the single most confidently
+  wrong, most consistently wrong result in this entire benchmark. Unlike the AGIEval misses
+  (which came with reduced confidence) or the memorization-check misses (which were
+  borderline), this is a plainly false geographic fact stated with near-total certainty, every
+  time it was asked.
+- **The dice-probability question** reproduces the user's "wrong in all 12" finding exactly
+  (12 = the user's original observations + this round's 6 reruns, all landing on "sum to
+  seven"). The likely mechanism: "7 is the most common sum of two dice" is real, famous, and
+  true *for single-sum comparisons* — but this question asks among a mixed set of events
+  (a compound event spanning 11 outcomes vs. a single-sum event spanning 6), and Jev appears to
+  pattern-match the famous fact onto a question shape it doesn't actually apply to, rather than
+  enumerating the 36 outcomes per option.
+
+**Why this round breaks harder than round 6:** the round-6 puzzles (Monty Hall, 9.11 vs. 9.9,
+CRT trio) are extremely famous — likely to appear explicitly, by name, alongside their correct
+answer, in training-adjacent text about AI reasoning failures. These geography and
+multi-option comparison facts are real but comparatively obscure trivia, not "the classic gotcha
+question" with a well-known documented answer — so there's less to fall back on beyond
+whatever raw geographic/quantitative knowledge and computation the model does at answer time,
+and that appears to be substantially less reliable than its algebra (round 8) or general SAT
+performance (round 7).
+
+All six robust misses here have been added to **Beat Jev** (v4, 25 questions) as new,
+genuinely winnable questions.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -508,6 +570,14 @@ harder for Jev even when it lands on the right answer.
   model is actually solving these equations, not recalling a published key, at least for this
   class of algebra problem
 
+🚩 **A real, high-severity weak spot:** obscure surprising-fact geography questions and
+many-option ("which of these 6 is largest/most likely") comparisons broke Jev **6 times out of
+8**, confirmed over 6 live reruns each — the worst result of any round in this benchmark, and a
+sharp contrast with round 6's near-perfect resistance to comparably "surprising" but far more
+famous facts. One of these (Rome vs. NYC latitude) was wrong at **0.98 confidence, 6/6 times**
+— the single most confidently-and-consistently wrong result seen so far. See round 9 for
+detail; this deserves more weight than a single bullet point.
+
 ⚠️ **Considerations:**
 - Only one obscure/flawed trivia item tested so far — worth confirming the ambiguity-detection
   behavior holds across more genuinely hard or ill-posed questions, not just this one case
@@ -538,6 +608,13 @@ harder for Jev even when it lands on the right answer.
   was corrupted (a missing percentage value), making it unanswerable from the text given
   regardless of who or what is answering. Worth spot-checking whether other "misses" in a
   future larger run have the same root cause before attributing them to the model
+- **Externally-reported results don't always reproduce**: of 8 questions from the user's own
+  testing, 6 reproduced cleanly as robust misses over 6 fresh reruns, but 2 didn't (Canada vs.
+  France, penny doubling — both came back 6/6 *correct* here). One is plausibly explained by
+  low confidence/genuine instability; the other isn't, and is more likely a wording-sensitivity
+  effect between the original phrasing and this round's. A reminder that single observations —
+  including ones already reported here in earlier rounds as one-off calls — warrant rerunning
+  before being treated as settled
 
 ---
 
@@ -586,3 +663,11 @@ harder for Jev even when it lands on the right answer.
       real-benchmark comparison beyond SAT
 - [ ] Test longer passages with more questions per passage
 - [ ] Probe ambiguity-detection behavior with more flawed/trick questions to see if it's consistent
+- [x] Verify user-reported test results by rerunning each 6x live — 6/8 questions confirmed as
+      robust misses (obscure geography facts, many-option comparisons), 2 didn't reproduce
+- [ ] **This is now the top-priority follow-up**: map the boundary of the geography/many-option
+      weak spot found in round 9. Is it specific to *obscure* surprising facts (vs. the famous
+      ones round 6 handled fine)? Does the many-option (6-choice) format itself hurt accuracy
+      independent of content — test round 7/8-style items reformatted to 6 options as a control?
+- [ ] Get an exact-wording explanation for the penny-doubling non-reproduction — rerun with the
+      user's likely original phrasing to see if it flips back to a miss
