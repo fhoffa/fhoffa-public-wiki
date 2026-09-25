@@ -1,6 +1,13 @@
 # public-wiki
 fhoffa public wiki
 
-## Notes
+## Contents
 
-- [Jev TypeSafe Testing](./jev-typesafe-testing.md) — Quick API evaluation of TypeSafe's Jev model for text classification
+### AI & LLMs
+- [Jev TypeSafe Testing](./ai-models/jev-typesafe-testing.md) — Quick API evaluation of TypeSafe's Jev model for text classification
+
+### Databases
+
+### Tools
+
+### Languages
