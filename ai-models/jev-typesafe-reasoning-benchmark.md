@@ -104,6 +104,56 @@ with each answer returned under its own key.
 
 ---
 
+## Round 3: "Beat Jev" — a browser game
+
+The 14 well-formed items from rounds 1–2 (minus the flawed Shakespeare question, plus a few
+new ones for variety — vocab, probability, a syllogism trap, a riddle) were consolidated into
+a fixed dataset and built into a playable browser game:
+
+**[Beat Jev](https://claude.ai/artifact/UXkfKUS4tVW7HLzFTXtmp2)** — race Jev on the same 14
+questions, item by item. Your reaction time is measured from when the question appears to
+when you click an answer; Jev's time and confidence are real numbers captured from the API
+calls below, not simulated. At the end you get a head-to-head: accuracy and total time, you
+vs. Jev, plus a full question-by-question breakdown.
+
+**Methods for the game data:** each of the 14 questions was sent once to `POST
+/v1/systemone` (model `jev-latest`) as a `choice` question, with client-side wall-clock
+timing (Python `time.perf_counter()` around the HTTP call) recorded alongside the response.
+The baked dataset stores, per question: the correct answer, Jev's choice, its confidence, and
+its latency in milliseconds. The game replays this fixed, pre-measured data against a live
+human timer rather than calling the API per play — Jev's API key isn't something a public
+static page can hold safely, and pre-baking keeps every player's "opponent" identical.
+
+**Result on this batch: Jev went 14/14, average latency 302ms** (fastest 249ms, slowest
+652ms on the one sentence-completion item). Full per-item data:
+
+| Question | Category | Difficulty | Jev correct? | Confidence | Latency |
+|---|---|---|---|---|---|
+| Critic's review sentence completion | SAT Verbal | easy | ✅ | 1.00 | 652ms |
+| Vexillology studies... | Trivia | easy | ✅ | 1.00 | 266ms |
+| Element symbol W | Trivia | easy | ✅ | 1.00 | 285ms |
+| Wrote *Pride and Prejudice* | Trivia | easy | ✅ | 1.00 | 318ms |
+| 3x+7=22, find 6x+14 | SAT Math | medium | ✅ | 0.99 | 330ms |
+| Only mortal Gorgon sister | Trivia | medium | ✅ | 1.00 | 269ms |
+| Only non-rectangular flag | Trivia | medium | ✅ | 1.00 | 269ms |
+| Planet with day longer than its year | Trivia | medium | ✅ | 1.00 | 249ms |
+| 20% markup then 20% discount | SAT Math | hard | ✅ | 0.98 | 254ms |
+| Marble probability (no replacement) | SAT Math | hard | ✅ | 0.95 | 279ms |
+| Bat & ball classic trap | Reasoning Trap | hard | ✅ | 0.93 | 269ms |
+| Syllogism trap (Bloops/Razzies/Mots) | Logic | hard | ✅ | 1.00 | 255ms |
+| Snail-in-the-well | Reasoning Trap | very hard | ✅ | 0.60 | 280ms |
+| "What has keys but no locks" riddle | Riddle | very hard | ✅ | 0.98 | 257ms |
+
+**On the Haiku column:** the game ships a "TBD" placeholder for Claude Haiku rather than a
+number. A quick attempt to source Haiku's answers via a subagent call showed ~11 seconds of
+overhead per question — almost entirely agent-framework spin-up, not model inference time —
+which would make for a misleading speed comparison against Jev's clean ~300ms API responses.
+Filling in Haiku (and possibly other models) properly needs a real head-to-head setup: direct
+API calls to each model with consistent, isolated timing, plus token cost per answer. That's
+tracked as a to-do below rather than guessed at now.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -139,6 +189,10 @@ with each answer returned under its own key.
 
 - [x] Test SAT reading-comprehension passages (long `state`, multiple `choice` questions per passage)
 - [x] Push into harder Millionaire-ladder trivia (obscure/high-difficulty questions)
+- [x] Build a playable "Jev vs. human" game ([Beat Jev](https://claude.ai/artifact/UXkfKUS4tVW7HLzFTXtmp2))
+- [ ] **Proper Haiku (and other model) benchmark: speed, cost, and accuracy on the same 14-question set**,
+      measured via direct API calls with isolated timing (not agent-framework overhead) —
+      needed before the game's Haiku column can show real numbers
 - [ ] Try the `score` question type on a rubric-graded task
 - [ ] Run a larger, more systematic accuracy benchmark against a public SAT practice set
 - [ ] Compare `jev-latest` vs `jev-preview` on the same item set
