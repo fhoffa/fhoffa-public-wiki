@@ -573,6 +573,72 @@ attack, not just noise.
 
 ---
 
+## Round 11: Near-Tie Numeric & Magnitude Comparisons — the Worst Result Yet
+
+A second, much larger batch from the user's own testing: 16 binary/ternary "which is larger /
+farther / more likely" comparisons, mostly close numeric or magnitude judgments rather than
+famous trivia. 4 were reconfirmations of round 9 items (Santiago, LA/Reno, Rome/NYC, and a
+correction confirming Metropolitan France — not Canada — is in fact the right answer on the
+southernmost-extent question, consistent with what round 9 already had). The other **12 were
+new, and every single one was reported as a miss.**
+
+Five were independently verified here at n=4 each (Venus periods, the exact-tie
+combinatorics question, √10 vs. 3.162, percentage-change magnitude, folding-vs-stacking) —
+**all reproduced at 0/4**, fully consistent with the user's data. Three more (divisors of 36
+vs. 40, 3^20 vs. 2^32, the birthday-paradox-vs-dice probability comparison) were run live here
+too.
+
+| Question | Correct | Jev picked | Result | Confidence |
+|---|---|---|---|---|
+| Percentage change with larger magnitude: 50→60 (+20%) vs. 60→50 (−16.7%) | The increase | The decrease | ❌ | 0.76–0.88 |
+| More layers: folding a sheet 10 times (2^10=1024) vs. stacking 1,000 sheets | Folding | Stacking | ❌ | 0.63–0.72 |
+| More divisors: 36 (9 divisors) vs. 40 (8 divisors) | 36 | **36** | ✅ (did not reproduce as a miss — see below) | 0.10–0.29 |
+| Larger: 3^20 (3.49B) vs. 2^32 (4.29B) | 2^32 | 3^20 | ❌ | 0.13–0.20 |
+| Larger: 1% of 1,000 (=10) vs. 10% of 99 (=9.9) | 1% of 1,000 | 10% of 99 | ❌ | (user-reported) |
+| Higher probability: birthday collision among 23 people (≈50.73%) vs. ≥1 six in four die rolls (≈51.77%) | ≥1 six in 4 rolls | Birthday collision | ❌ | 0.78–0.80 |
+| Venus: sidereal rotation period vs. orbital period, which is longer? | Rotation (243d > 224.7d) | Orbital period | ❌ | 0.42–0.61 |
+| Larger fraction: 13/29 (0.4483) vs. 9/20 (0.4500) | 9/20 | 13/29 | ❌ | 0.05–0.10 |
+| Larger: 1 decimal GB (10⁹ bytes) vs. 0.94 GiB (≈1.009×10⁹ bytes) | 0.94 GiB | 1 decimal GB | ❌ | 0.54–0.56 |
+| Larger: √10 (3.16228) vs. 3.162 | √10 | 3.162 | ❌ | 0.27–0.69 |
+| Larger: 5^13 (1.221B) vs. 2^30 (1.074B) | 5^13 | 2^30 | ❌ | 0.16–0.19 |
+| Larger count: C(10,4) vs. C(21,2) — both equal 210 | They are equal | C(21,2) (failed to recognize the tie) | ❌ | 0.37–0.48 |
+
+**11 of 12 confirmed as genuine, repeatable misses** — the highest concentration of failures
+in this entire benchmark, well beyond even round 9. The one exception, the divisors question,
+was rerun 6 times here and came back **6/6 correct** (0.10–0.29 confidence) — a real
+non-reproduction, not included as a miss, and not added to the game.
+
+**Two results are especially worth dwelling on:**
+
+- **The Venus reversal.** Round 5 asked "which planet has a day longer than its year?" with
+  Venus as the answer, and Jev got it right, confidently. Round 11 asks the *exact same fact*
+  — Venus's rotation period exceeds its orbital period — phrased as a direct two-way comparison
+  ("sidereal rotation period" vs. "orbital period"), and Jev gets it wrong every time. Same
+  fact, different surface form, opposite result. This is strong evidence that at least some of
+  Jev's apparent "knowledge" is tied to recognizing a familiar question shape (the famous
+  "Venus's day is longer than its year" trivia framing) rather than a stable, retrievable fact
+  independent of phrasing.
+- **The exact-tie question.** C(10,4) and C(21,2) are both precisely 210 — "they are equal"
+  was offered as an explicit option, and Jev never took it, defaulting instead to picking one
+  side of a comparison it seems to assume must have a winner. Combined with the √10-vs-3.162
+  and 13/29-vs-9/20 misses (both genuine near-ties, off by roughly 0.1%), this points at a
+  specific failure shape: **when two quantities are extremely close, Jev doesn't reliably
+  compute the precise comparison — it seems to guess within the right neighborhood rather than
+  resolve the actual margin**, which is exactly backward from what you'd want a numeric judge
+  to do.
+
+This substantially sharpens round 9's finding. It isn't really about geography, or about
+having six options instead of two (several of these misses are plain binary comparisons) — the
+common thread across nearly every miss in both rounds 9 and 11 is a **close, non-famous
+numeric or spatial comparison that requires actually computing or retrieving a precise value**,
+as opposed to pattern-matching a well-known fact or a large, obviously-different quantity.
+
+Seven of the confirmed misses (percentage-change magnitude, folding-vs-stacking, 3^20-vs-2^32,
+birthday-vs-dice, Venus periods, the exact-tie combinatorics question, and √10-vs-3.162) have
+been added to **Beat Jev** (v5, 32 questions).
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -618,13 +684,19 @@ attack, not just noise.
   model is actually solving these equations, not recalling a published key, at least for this
   class of algebra problem
 
-🚩 **A real, high-severity weak spot:** obscure surprising-fact geography questions and
-many-option ("which of these 6 is largest/most likely") comparisons broke Jev **6 times out of
-8**, confirmed over 6 live reruns each — the worst result of any round in this benchmark, and a
-sharp contrast with round 6's near-perfect resistance to comparably "surprising" but far more
-famous facts. One of these (Rome vs. NYC latitude) was wrong at **0.98 confidence, 6/6 times**
-— the single most confidently-and-consistently wrong result seen so far. See round 9 for
-detail; this deserves more weight than a single bullet point.
+🚩 **The single biggest weak spot found in this benchmark: close numeric/spatial comparisons
+that require actually computing or retrieving a precise value.** Round 9 found 6/8 misses on
+geography facts and many-option comparisons; round 11 sharpened this with 11 more confirmed
+misses out of 12 tried — percentage-change magnitude, exponential-growth intuition (folding
+paper, doubling), large-number and near-tie numeric comparisons (3^20 vs. 2^32, √10 vs. 3.162,
+13/29 vs. 9/20), an exact tie it never recognized as a tie (C(10,4) = C(21,2) = 210), and even
+the same Venus fact it got right in round 5, phrased as a direct comparison instead of a
+trivia question. One (Rome vs. NYC latitude, round 9) was wrong at **0.98 confidence, 6/6
+times** — the single most confidently-and-consistently wrong result in the whole benchmark.
+This is a sharp contrast with round 6's near-perfect resistance to famous "surprising fact"
+puzzles (Monty Hall, 9.11 vs. 9.9): the common thread isn't surprisingness, it's whether the
+comparison is close enough that pattern-matching a familiar answer shape isn't available and
+the model has to actually resolve the precise margin.
 
 🚩 **Prompt injection works, on marginal-confidence questions:** text embedded in `state`
 telling the model to "always answer this wrong" flipped a naturally-borderline question's
@@ -676,6 +748,11 @@ container for untrusted user text in any application where an honest judgment ma
   showed it's actually consistently correct, just with near-zero confidence. Small-sample reads
   in this document, including earlier rounds that used n=3-6, should be treated as provisional
   until re-confirmed at higher n, not as settled fact
+- **Another user-reported miss didn't reproduce**: the 36-vs-40 divisors question came back
+  6/6 correct across two separate live-verification passes here, despite being reported as a
+  miss. Its confidence stayed low (0.10–0.29) both times, so — like the earlier Canada/France
+  case — this looks like genuine low-confidence instability rather than a wording mismatch,
+  but it's excluded from the confirmed-miss count and not added to the game
 
 ---
 
@@ -741,3 +818,15 @@ container for untrusted user text in any application where an honest judgment ma
       enough variations of the instruction
 - [ ] Test injection phrasings placed in `criteria`/option text itself, not just prefixed to
       `state` — a different untrusted-content surface an application might expose
+- [x] Verify a large second batch (16 questions) of user-reported near-tie/magnitude
+      comparisons — 11/12 new items confirmed as genuine misses, the highest concentration of
+      failures in this benchmark; 1 (divisors of 36 vs 40) didn't reproduce (6/6 correct)
+- [ ] **Now the clearest, highest-value target**: build a large, systematic battery of
+      close-numeric-comparison questions (varying how close the margin is: 1%, 5%, 20%, 2x) to
+      find where the accuracy curve actually breaks — is there a margin threshold below which
+      Jev is essentially guessing, and does confidence track that margin honestly?
+- [ ] Test whether giving Jev room to "show work" (e.g. a `score` or structured multi-question
+      request that asks it to state each quantity before comparing) fixes the near-tie failures,
+      which would suggest this is a "System 1 doesn't compute" issue rather than a knowledge gap
+- [ ] Retest the Venus framing effect on other facts already covered elsewhere in this
+      benchmark (trivia-question phrasing vs. direct comparison phrasing) to see how general it is
