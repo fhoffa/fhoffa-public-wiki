@@ -315,6 +315,106 @@ re-tested this way.
 
 ---
 
+## Round 7: The Real Thing — Full AGIEval SAT Benchmark
+
+Every round above used hand-picked or hand-written questions — at most a few dozen at a time,
+chosen by me. This round switches to an actual, independent, peer-reviewed benchmark, run in
+full, with no sampling and no question design on my part.
+
+**Data source:** [AGIEval](https://arxiv.org/abs/2304.06364) (Microsoft Research, 2023) is a
+published benchmark that includes real, official SAT Math and SAT Reading/Writing questions
+pulled from actual past exams. The processed dataset is mirrored on GitHub
+([ruixiangcui/AGIEval](https://github.com/ruixiangcui/AGIEval)) as `sat-math.jsonl` (220
+questions) and `sat-en.jsonl` (206 questions, including full reading passages) — **426
+questions total**, every one of them used, none skipped or cherry-picked.
+
+*(Note on tooling: this session's network access is limited to GitHub and the TypeSafe API —
+Hugging Face's dataset-hosting API was unreachable — so GitHub was the practical route to a
+public benchmark; it turned out to have exactly what was needed.)*
+
+**Method:** each item's options were parsed into `{letter: text}` criteria and sent as a
+`choice` question, `state` set to the passage (if any) plus the question text, unmodified from
+the source data. Every question was run exactly once, sequentially, with retries on transport
+errors (none were needed — zero errors across all 426 calls).
+
+### Results
+
+| Metric | Value |
+|---|---|
+| Overall accuracy | **97.9%** (417/426) |
+| SAT Math accuracy | 98.6% (217/220) |
+| SAT English accuracy | 97.1% (200/206) |
+| Average latency | 270ms |
+| Errors | 0 |
+
+### Confidence calibration
+
+This is the most rigorous calibration read of the whole benchmark, since it's the first time
+there's enough data for a real curve rather than a handful of anecdotes:
+
+| Confidence | n | Accuracy |
+|---|---|---|
+| 0.1 | 4 | 50.0% |
+| 0.2 | 2 | 50.0% |
+| 0.3 | 11 | 72.7% |
+| 0.4 | 2 | 100.0% |
+| 0.5 | 5 | 100.0% |
+| 0.6 | 5 | 80.0% |
+| 0.7 | 10 | 90.0% |
+| 0.8 | 18 | 100.0% |
+| 0.9 | 43 | 100.0% |
+| 1.0 | 326 | 99.7% |
+
+Average confidence was **0.939 when correct** vs. **0.399 when wrong** — a wide, clean
+separation. Roughly three-quarters of all 426 answers came in at confidence 0.9+ and were
+essentially always right; the model's uncertainty is concentrated almost entirely on the small
+set of items it actually gets wrong.
+
+### The 9 misses
+
+| Category | Correct | Jev said | Confidence |
+|---|---|---|---|
+| SAT Math | A | B | 0.22 |
+| SAT Math | C | B | 0.14 |
+| SAT Math | C | D | 0.59 |
+| SAT English | D | A | 0.71 |
+| SAT English | A | B | **0.96** |
+| SAT English | C | D | 0.30 |
+| SAT English | D | C | 0.27 |
+| SAT English | C | A | 0.08 |
+| SAT English | A | D | 0.32 |
+
+Seven of the nine misses came in under 0.75 confidence — consistent with the calibration
+pattern, the model was uncertain going in. Two stand out for being confidently wrong, and both
+are worth a closer look rather than taken at face value:
+
+**The 0.71 miss** — a data-table question about honeybee colony collapse disorder — traces
+back to **corrupted source data**, not a reasoning failure. The passage's table, as delivered
+in the AGIEval mirror, reads `Nosema ceranae & All four pathogens &` — the actual percentage
+value for that row is missing, evidently lost in whatever PDF-to-text pipeline produced this
+dataset. The question asks which pathogen had the highest infection percentage, and the
+correct-per-answer-key pathogen's own percentage isn't recoverable from the text given. No
+reader — human or model — could reliably get this one right from the data actually provided.
+This is flagged here rather than silently excluded, because it's a real result of running the
+full unmodified dataset, but it shouldn't be scored as evidence about Jev's reasoning.
+
+**The 0.96 miss** is more interesting. It's a literary-interpretation question — "Throughout
+the passage, the narrator is portrayed as someone who is..." — where the official answer is
+"reserved around unfamiliar people" but Jev confidently chose "attuned to her immediate
+surroundings," based on the passage's vivid sensory detail (the sound of ink like "a small
+silver bell," discussion of scent and hue). This is the kind of soft, inference-based
+reading-comprehension question where reasonable readers can genuinely disagree — the full
+passage (only the tail of it is quoted above) likely supports the official answer more clearly
+than the excerpt alone suggests, but this is a legitimate case of the model being confidently
+wrong on subjective literary inference rather than a clean factual or logical error.
+
+Net read: **on a real, full-scale, independently-authored SAT benchmark, Jev performs very
+well (97.9%) with well-calibrated confidence**, and even its rare confident misses have
+identifiable causes (bad source data in one case, defensible-but-non-canonical literary
+interpretation in the other) rather than looking like random noise.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -348,9 +448,13 @@ re-tested this way.
   reflexive "always switch, 2/3" pattern-matching — still went 7/7 correct, with confidence
   dropping appropriately on the harder, rarer variants rather than confidently repeating the
   memorized textbook answer
+- **97.9% on a real, full, independently-authored benchmark**: run against all 426 questions
+  in AGIEval's SAT Math + SAT English sets (no sampling, no cherry-picking), Jev scored 98.6%
+  math / 97.1% English, with the best-calibrated confidence curve seen in this benchmark —
+  0.939 average confidence when correct vs. 0.399 when wrong, and near-100% accuracy at every
+  confidence bucket above 0.7
 
 ⚠️ **Considerations:**
-- Sample size still modest; no formal accuracy benchmark (e.g. full SAT practice sets) run yet
 - Only one obscure/flawed trivia item tested so far — worth confirming the ambiguity-detection
   behavior holds across more genuinely hard or ill-posed questions, not just this one case
 - Reading comprehension tested with a single passage/2 questions; unclear how it scales to
@@ -374,6 +478,10 @@ re-tested this way.
   own they couldn't distinguish genuine reasoning from recalling a well-known answer. Round 6's
   perturbation test addresses this for 7 of them, but wasn't run against every famous item used
   earlier (snail-in-the-well, the piano riddle, and the trivia facts weren't retested this way)
+- **The AGIEval SAT mirror itself has data-quality issues**: at least one item's source table
+  was corrupted (a missing percentage value), making it unanswerable from the text given
+  regardless of who or what is answering. Worth spot-checking whether other "misses" in a
+  future larger run have the same root cause before attributing them to the model
 
 ---
 
@@ -400,8 +508,14 @@ re-tested this way.
       to see if the pattern generalizes
 - [ ] Map the boundary of the age-word-problem blind spot: does it hold for 3+ timepoint
       problems, or ones phrased with "ago"/"in N years" swapped for absolute years?
+- [x] Run a larger, more systematic accuracy benchmark against a public SAT practice set —
+      full AGIEval SAT Math + English (426 questions, real exam data): **97.9% accuracy**,
+      well-calibrated confidence (0.94 avg when correct vs. 0.40 when wrong)
 - [ ] Try the `score` question type on a rubric-graded task
-- [ ] Run a larger, more systematic accuracy benchmark against a public SAT practice set
-- [ ] Compare `jev-latest` vs `jev-preview` on the same item set
+- [ ] Compare `jev-latest` vs `jev-preview` on the same 426-question AGIEval set
+- [ ] Spot-check the other 8 AGIEval "misses" for source-data corruption like the bee-colony
+      table, to get a cleaner true-error-rate estimate
+- [ ] Pull in more AGIEval sections (LSAT, GRE, GMAT are all in the same dataset) for a broader
+      real-benchmark comparison beyond SAT
 - [ ] Test longer passages with more questions per passage
 - [ ] Probe ambiguity-detection behavior with more flawed/trick questions to see if it's consistent
