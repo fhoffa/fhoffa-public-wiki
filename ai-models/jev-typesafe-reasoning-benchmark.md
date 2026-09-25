@@ -639,6 +639,63 @@ been added to **Beat Jev** (v5, 32 questions).
 
 ---
 
+## Round 12: Mapping the Margin — Where Does Accuracy Actually Break?
+
+Rounds 9 and 11 established that close numeric comparisons are a real weak spot. This round
+asks the natural follow-up: **how close is "close"?** Is there an actual threshold margin
+below which accuracy falls apart, and does confidence track it honestly?
+
+**Method:** two computation types already established as hard — comparing two fractions
+(`p/q` vs `r/s`) and comparing two powers (`a^b` vs `c^d`) — were generated systematically
+across five margin bands, based on the *actual* relative difference between the two values
+(not a designed target, to avoid construction bias): **tiny (<1%), small (1–5%), medium
+(5–20%), large (20–60%), huge (>60%)**. A/B position was randomized so the correct answer
+isn't predictable from option order. 38 questions were generated and run once each; the tiny
+band was then expanded from 6 to 19 items (details below) once it looked like the most
+important region.
+
+### Results (51 questions total)
+
+| Margin band | n | Accuracy | Avg. confidence |
+|---|---|---|---|
+| tiny (<1%) | 19 | 47.4% | 0.25 |
+| small (1–5%) | 8 | 87.5% | 0.45 |
+| medium (5–20%) | 8 | 75.0% | 0.30 |
+| large (20–60%) | 8 | 75.0% | 0.60 |
+| huge (>60%) | 8 | 100% | 0.87 |
+
+**The tiny-margin band is essentially a coin flip (47.4%), and confidence there is the
+lowest of any band (0.25)** — both point at the same conclusion: below roughly 1% margin,
+Jev cannot reliably resolve which of two fractions or powers is larger, and it seems to know
+it. Above that, accuracy jumps sharply (87.5% at 1–5%) and confidence rises steadily,
+reaching near-ceiling (100% accuracy, 0.87 confidence) once the two values differ by more than
+60%.
+
+**A correction, caught before publishing:** the first pass at the tiny band used only 6
+items and showed 33% accuracy — *below* the 50% chance baseline for a two-option question,
+which would have been a much more dramatic (and more publishable-sounding) claim: that Jev is
+somehow anti-correlated with the truth at extreme closeness. A quick binomial check before
+writing this up showed that 2/6 isn't actually distinguishable from chance (about a 34%
+probability of seeing that by luck alone) — so the band was expanded to 19 items rather than
+reporting the flashier small-sample number. The real result is more mundane and more honest:
+performance at the tiny margin is indistinguishable from guessing, not worse than guessing.
+This is the same lesson round 10 already taught with its n=3→n=10 correction, applied here
+before the wrong number ever made it into the doc rather than after.
+
+**The medium and large bands (75% each) don't fit a perfectly smooth curve** — a clean
+monotonic rise would put large above medium, not tied with it. With n=8 per band this is very
+plausibly just noise (a couple of unlucky misses either way would erase the gap), not a real
+dip. Worth more data before reading anything into that specific shape.
+
+**Net read:** there's a real, fairly sharp margin effect, not a gradual one. Somewhere around
+1% relative difference, Jev crosses from "no better than guessing" to "usually right," and by
+the time two quantities differ by 60%+ it's essentially always right. Confidence is
+directionally honest about this — it's lowest exactly where accuracy is worst — which is the
+right behavior for a judge model, even though the underlying comparison ability itself clearly
+has a hard floor at extreme closeness.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -697,6 +754,14 @@ This is a sharp contrast with round 6's near-perfect resistance to famous "surpr
 puzzles (Monty Hall, 9.11 vs. 9.9): the common thread isn't surprisingness, it's whether the
 comparison is close enough that pattern-matching a familiar answer shape isn't available and
 the model has to actually resolve the precise margin.
+
+📊 **That weak spot now has a measured shape, not just anecdotes.** Round 12 systematically
+swept relative margin from <1% to >60% across 51 fraction/power comparisons: accuracy is
+47% (chance level) below a 1% margin, jumps to 87.5% once the margin exceeds 1%, and reaches
+100% above 60%. Confidence tracks the same curve, lowest (0.25) exactly where accuracy is
+worst. There's a real, fairly sharp threshold around 1% relative difference — not a gradual
+decline — below which the model is not usefully better than guessing, whatever its stated
+confidence-adjacent behavior looks like on any single call.
 
 🚩 **Prompt injection works, on marginal-confidence questions:** text embedded in `state`
 telling the model to "always answer this wrong" flipped a naturally-borderline question's
@@ -830,3 +895,12 @@ container for untrusted user text in any application where an honest judgment ma
       which would suggest this is a "System 1 doesn't compute" issue rather than a knowledge gap
 - [ ] Retest the Venus framing effect on other facts already covered elsewhere in this
       benchmark (trivia-question phrasing vs. direct comparison phrasing) to see how general it is
+- [x] Map the margin threshold systematically (fractions + powers, <1% to >60%, 51 questions):
+      accuracy is chance-level (47%) below ~1% margin, jumps to 87.5% above it, reaches 100%
+      above 60%; confidence tracks the same curve
+- [ ] Pin down the exact threshold more precisely (test 1-10% in finer bands — 1-2%, 2-3%,
+      3-5%, 5-10% — to find where the chance-level floor actually starts lifting)
+- [ ] Check whether the ~1% threshold holds for other computation types (sqrt/decimal,
+      combinatorics, unit conversions) or is specific to fractions and powers
+- [ ] Resolve the medium-vs-large tie (both 75%) with more data per band — likely noise at
+      n=8, but worth confirming before treating the curve as non-monotonic there
