@@ -217,6 +217,56 @@ players either.
 
 ---
 
+## Round 5: Hunting for Genuine Misses
+
+Purpose-built to break Jev: 10 new questions targeting known LLM/fast-judgment weak spots —
+decimal comparison, Bayesian base-rate reasoning, exact multi-digit arithmetic, the Monty Hall
+problem, a garden-path sentence, letter counting, and classic CRT-style word problems.
+
+| Question | Category | Correct answer | Jev's answer | Correct? | Confidence |
+|---|---|---|---|---|---|
+| Widget machines (5 machines/5 min/5 widgets → 100/100) | Reasoning Trap | B (5 minutes) | B | ✅ | 1.00 |
+| Lily pad doubling (covers lake in 48 days, covers half in?) | Reasoning Trap | B (47 days) | B | ✅ | 1.00 |
+| Which is larger, 9.11 or 9.9? | Reasoning Trap | B (9.9) | B | ✅ | 0.97 |
+| Base-rate disease test (1/1000 prevalence, 99% accurate test, positive result → P(disease)?) | Probability | C (~9%) | C | ✅ | 0.95 |
+| 47 × 63 | Arithmetic | B (2961) | B | ✅ | 1.00 |
+| Monty Hall — should you switch doors? | Probability | B (yes, 2/3 vs 1/3) | B | ✅ | 1.00 |
+| Garden-path sentence: part of speech of "houses" in "The complex houses married and single soldiers" | Reading Comprehension | B (verb) | B | ✅ | 0.93 |
+| Count of "s" in "Mississippi" | Counting | C (4) | C | ✅ | 0.92 |
+| **Mary age problem** (in 8 yrs, twice as old as 4 yrs ago → age now?) | Reasoning Trap | B (16) | **A (12)** | ❌ | 0.41 |
+| Number sequence 2, 6, 12, 20, 30, ? | SAT Math | C (42) | C | ✅ | 0.98 |
+
+**9/10 correct.** Jev held up on every classic "trick question" compilation staple thrown at
+it — including two of the most famous LLM failure modes (9.11 vs 9.9, and base-rate neglect)
+and the Monty Hall problem, which most humans also get wrong. The one miss — the Mary age
+problem — turned out to be the most interesting result of the whole test.
+
+**Digging into the Mary miss.** Unlike the algebra coin-flip from round 4, this one is not
+close and not order-sensitive:
+
+- Rerun 5 more times with identical wording/order: **wrong all 5 times**, confidence 0.34–0.63,
+  always picking "12."
+- Choices reshuffled to a new letter order: **still wrong**, now landing on whichever letter
+  "12" occupied — confirming the model is locking onto the value 12, not a letter position.
+- Same structure, new numbers ("Sam," 6 years / 3 years ago, correct answer 12, distractor 9):
+  **wrong, and more confidently so** — 0.84 confidence, picking 9 (the "3 years ago" value)
+  instead of 12.
+- Same math, clauses reordered ("Four years ago, Mary was half as old as she will be in 8
+  years..."): **still wrong**, 0.62 confidence, still picking 12.
+
+The pattern across all four variants: Jev consistently answers with the age given for the
+*past* reference point in the problem ("...as old as she was N years ago") rather than solving
+the equation for the *present* age being asked about. This looks like a genuine, systematic
+reasoning gap in a specific problem shape — two-timepoint relative-age word problems — not
+noise, and not an artifact of how the choices were ordered.
+
+The Mary age problem has been added to the **Beat Jev** game (v3) as question #15, where Jev's
+baked answer is the wrong one — the first question in the game a human can actually expect to
+win. Four of the other correctly-answered items (widget machines, the 9.11/9.9 comparison,
+Monty Hall, and the Mississippi letter count) were added too, for variety.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -240,6 +290,9 @@ players either.
 - **Mostly robust to answer-order shuffling**: relocating the correct answer to the
   least-tested letter position (D/E) held correct on 13 of 14 questions, evidence the model
   is generally reasoning about content rather than pattern-matching letter position
+- **Solid on famous "gotcha" compilations**: got the 9.11-vs-9.9 comparison, Bayesian
+  base-rate neglect, and Monty Hall all correct with high confidence — three of the most
+  commonly-cited LLM/human reasoning failure modes
 
 ⚠️ **Considerations:**
 - Sample size still modest; no formal accuracy benchmark (e.g. full SAT practice sets) run yet
@@ -255,6 +308,12 @@ players either.
   presentation. Worth checking whether this is isolated to borderline-confidence items or a
   broader pattern before trusting `choice` answers on arithmetic without a confidence-based
   review threshold
+- **A real, systematic miss on two-timepoint age word problems**: across 4 problem variants
+  and 8 total calls, Jev consistently answered with the age given for the *past* reference
+  point in the problem instead of solving for the age being asked about — including one
+  variant answered wrong with 0.84 confidence. This isn't noise; it's a specific shape of
+  word problem the model doesn't reliably solve, and worth treating as a known blind spot
+  rather than a fluke
 
 ---
 
@@ -264,13 +323,17 @@ players either.
 - [x] Push into harder Millionaire-ladder trivia (obscure/high-difficulty questions)
 - [x] Build a playable "Jev vs. human" game ([Beat Jev](https://claude.ai/artifact/UXkfKUS4tVW7HLzFTXtmp2))
 - [x] Check for answer-letter position bias in the test set, and whether Jev is order-invariant
-- [ ] **Proper Haiku (and other model) benchmark: speed, cost, and accuracy on the same 14-question set**,
-      measured via direct API calls with isolated timing (not agent-framework overhead) —
-      needed before the game's Haiku column can show real numbers
+- [x] Deliberately construct new questions designed to make Jev fail — found a real,
+      reproducible miss (the two-timepoint age word problem) and added it to the game
+- [ ] **Proper Haiku (and other model) benchmark: speed, cost, and accuracy on the same
+      19-question set**, measured via direct API calls with isolated timing (not
+      agent-framework overhead) — needed before the game's Haiku column can show real numbers
 - [ ] Investigate the algebra-question instability further: is it specific to that item, to
       near-50/50-confidence items generally, or to arithmetic questions with a plausible
       "forgot the last step" distractor? Try a few more order-rotated arithmetic questions
       to see if the pattern generalizes
+- [ ] Map the boundary of the age-word-problem blind spot: does it hold for 3+ timepoint
+      problems, or ones phrased with "ago"/"in N years" swapped for absolute years?
 - [ ] Try the `score` question type on a rubric-graded task
 - [ ] Run a larger, more systematic accuracy benchmark against a public SAT practice set
 - [ ] Compare `jev-latest` vs `jev-preview` on the same item set
