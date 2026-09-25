@@ -72,6 +72,38 @@ without selecting it.
 
 ---
 
+## Round 2: Reading Comprehension & Obscure Trivia
+
+A second round pushed into harder territory: an SAT-style reading-comprehension passage
+with multiple questions per passage, and higher-tier ("$500K"/"$1M") Millionaire-style
+trivia, including one deliberately flawed question used to probe how the model handles
+genuine ambiguity.
+
+| # | Question | Category | Correct answer | Jev's answer | Correct? | Confidence |
+|---|---|---|---|---|---|---|
+| 7 | 19th-century urban-planning passage: author's primary argument re: pedestrians vs. cars | SAT reading comprehension | C (both improves quality of life and reduces congestion) | C | ✅ | 1.00 |
+| 8 | Same passage: author's tone toward current policy | SAT reading comprehension | critical | critical | ✅ | 1.00 |
+| 9 | Only mortal Gorgon sister in Greek mythology | Trivia ($500K tier) | A (Medusa) | A | ✅ | 1.00 |
+| 10 | "Only" Shakespeare title character who dies onstage (flawed premise — several qualify) | Trivia ($1M tier, deliberately ambiguous) | *no single correct answer* | B (Julius Caesar) | N/A | 0.51 |
+| 11 | Element with chemical symbol W | Trivia ($1M tier) | A (Tungsten) | A | ✅ | 1.00 |
+| 12 | What vexillology studies | Trivia ($1M tier) | A (Flags) | A | ✅ | 1.00 |
+
+**Score: 5/5 on well-formed questions correct** (item 10 excluded — see below).
+
+**Item 10 note:** this question was written with a false premise — Hamlet, Julius Caesar,
+and King Lear all die onstage in their respective plays, so "the only" one is not actually
+true. Rather than answer confidently, Jev split its probability mass across three plays
+(`B: 0.63, C: 0.14, D: 0.13, A: 0.10`) and reported only 0.51 overall confidence — its
+lowest confidence of the entire test. This is evidence the model is sensitive to genuine
+ambiguity in a question and signals it via confidence/probability spread rather than
+picking an answer with false certainty.
+
+The passage-based test (items 7–8) also confirms `state` can hold long-form multi-paragraph
+content, and a single request can carry multiple named `questions` against the same passage,
+with each answer returned under its own key.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -85,19 +117,30 @@ without selecting it.
   winner, useful for flagging low-margin answers for human review
 - **`choice` type works well for closed-form MCQ/trivia**, complementing the `noul` (yes/no)
   type explored in the earlier classification test
+- **Handles multi-paragraph passages**: `state` accepted a full reading-comprehension
+  passage, with multiple `questions` keys answered correctly against the same context in
+  one request
+- **Confidence tracks genuine ambiguity, not just difficulty**: given a trivia question with
+  a false "only one correct answer" premise, confidence dropped to 0.51 (its lowest of the
+  whole test) with probability spread across the plausible candidates, rather than
+  confidently committing to one — this is the behavior you want from a judge model
 
 ⚠️ **Considerations:**
-- Small sample (n=6); no formal accuracy benchmark (e.g. full SAT practice sets) run yet
-- All items were "single-hop" — no multi-paragraph SAT reading-comprehension passages tested yet
-- Not clear how performance holds up on truly obscure trivia (upper Millionaire ladder,
-  $500K–$1M tier) vs. these more solvable examples
+- Sample size still modest (12 items across two rounds); no formal accuracy benchmark
+  (e.g. full SAT practice sets) run yet
+- Only one obscure/flawed trivia item tested so far — worth confirming the ambiguity-detection
+  behavior holds across more genuinely hard or ill-posed questions, not just this one case
+- Reading comprehension tested with a single passage/2 questions; unclear how it scales to
+  longer passages or more questions per passage
 
 ---
 
 ## Next Steps
 
-- [ ] Test SAT reading-comprehension passages (long `state`, multiple `choice` questions per passage)
-- [ ] Push into harder Millionaire-ladder trivia (obscure/high-difficulty questions)
+- [x] Test SAT reading-comprehension passages (long `state`, multiple `choice` questions per passage)
+- [x] Push into harder Millionaire-ladder trivia (obscure/high-difficulty questions)
 - [ ] Try the `score` question type on a rubric-graded task
 - [ ] Run a larger, more systematic accuracy benchmark against a public SAT practice set
 - [ ] Compare `jev-latest` vs `jev-preview` on the same item set
+- [ ] Test longer passages with more questions per passage
+- [ ] Probe ambiguity-detection behavior with more flawed/trick questions to see if it's consistent
