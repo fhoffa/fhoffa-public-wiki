@@ -267,6 +267,54 @@ Monty Hall, and the Mississippi letter count) were added too, for variety.
 
 ---
 
+## Round 6: Memorization vs. Genuine Reasoning
+
+A fair challenge to rounds 1–5: **most of the "trap" questions were famous, well-documented
+puzzles**, not novel content. Bat-and-ball, widget-machines, and lily-pads are literally
+Frederick's Cognitive Reflection Test (the canonical three-question CRT). Monty Hall is the
+most famous probability puzzle that exists. The disease/base-rate question is a standard
+Tversky & Kahneman textbook example. 9.11-vs-9.9 went viral in 2024 specifically as an
+LLM-failure example. "The complex houses married and single soldiers" is *the* textbook
+garden-path sentence. For a model whose job is fast pattern-matching, recognizing "this is the
+famous puzzle" and recalling its documented answer is a real, distinct possibility from
+actually solving it — and the earlier results couldn't tell the two apart.
+
+**Method:** take each famous puzzle and change the numbers or setup just enough that its
+memorized textbook answer becomes *wrong*, while keeping the surface pattern clearly
+recognizable as "the same kind of puzzle." A model reciting the canonical answer would now
+fail; a model reasoning through the new numbers would still succeed.
+
+| Variant | What changed | Memorized answer (now wrong) | Correct answer | Jev's answer | Correct? | Confidence |
+|---|---|---|---|---|---|---|
+| Hat & scarf ($1.30 total, hat $1.00 more) | Bat-and-ball numbers | 5¢ | 15¢ | 15¢ | ✅ | 0.96 |
+| 8 machines/8 min/8 widgets → 200 machines/200 widgets | Widget-machine numbers | 5 minutes | 8 minutes | 8 minutes | ✅ | 0.99 |
+| Lily pads cover lake in 30 days, not 48 | Lily-pad day count | 47 days | 29 days | 29 days | ✅ | 1.00 |
+| **Monty Fall**: host opens a door *at random* (doesn't know what's behind it) and it happens to reveal a goat | The host's knowledge condition — this is the specific famous variant designed to catch "always switch" pattern-matchers | 2/3 (classic Monty Hall answer) | 1/2 | 1/2 | ✅ | 0.56 |
+| Disease affects 1/100 (not 1/1000), test 95% accurate (not 99%) | Base-rate numbers | ~9% | ~16% | ~16% | ✅ | 0.95 |
+| Fresh reduced-relative garden-path sentence ("The car washed by the mechanic looked brand new") | Entirely new sentence, same syntactic trick | n/a (novel) | main-verb misparse | main-verb misparse | ✅ | 0.91 |
+| Count of "e" in "necessitate" (not Mississippi's "s") | Different word | n/a (novel) | 3 | 3 | ✅ | 0.65 |
+
+**7/7 correct.** This is the strongest evidence in this benchmark against pure memorization.
+The standout is the Monty Fall variant: if Jev were reflexively answering "Monty Hall = switch
+= 2/3," it would have failed here, since the correct answer flips to 1/2 once the host's door
+choice is uninformative. Instead it landed on 1/2 — while its confidence dropped to 0.56 (its
+second-lowest of the whole benchmark) with 21% probability still sitting on 2/3, the naive
+"classic Monty Hall" answer. That's exactly the signature you'd want from genuine
+reasoning-under-difficulty rather than lookup: it considered the memorized answer, but the
+actual setup pulled it toward the correct one, with appropriately reduced certainty on a
+harder, rarer variant.
+
+**This doesn't fully settle the question.** Confidence on the two hardest variants (Monty
+Fall, 0.56; the letter-count reword, 0.65) was meaningfully lower than on the untouched famous
+versions (Monty Hall, 1.00; Mississippi, 0.92) — consistent with genuine generalization
+requiring more "effort" than recall, but also consistent with a blend of both mechanisms
+(partial pattern recognition plus partial recomputation). And this only tests 7 of the ~10
+famous puzzles used earlier; the CRT trio, base-rate, and Monty Hall itself all held up when
+perturbed, but the snail-in-the-well, the piano riddle, and the flag/trivia facts weren't
+re-tested this way.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -293,6 +341,13 @@ Monty Hall, and the Mississippi letter count) were added too, for variety.
 - **Solid on famous "gotcha" compilations**: got the 9.11-vs-9.9 comparison, Bayesian
   base-rate neglect, and Monty Hall all correct with high confidence — three of the most
   commonly-cited LLM/human reasoning failure modes
+- **Held up under a memorization stress test**: many of the "traps" above are famous enough
+  (the CRT trio, Monty Hall, base-rate neglect) that success could just mean recognizing the
+  puzzle and reciting its documented answer. Perturbing each one's numbers so the memorized
+  answer would be wrong — including the Monty Fall variant, built specifically to catch
+  reflexive "always switch, 2/3" pattern-matching — still went 7/7 correct, with confidence
+  dropping appropriately on the harder, rarer variants rather than confidently repeating the
+  memorized textbook answer
 
 ⚠️ **Considerations:**
 - Sample size still modest; no formal accuracy benchmark (e.g. full SAT practice sets) run yet
@@ -314,6 +369,11 @@ Monty Hall, and the Mississippi letter count) were added too, for variety.
   variant answered wrong with 0.84 confidence. This isn't noise; it's a specific shape of
   word problem the model doesn't reliably solve, and worth treating as a known blind spot
   rather than a fluke
+- **Most of the "resisted the trap" results used famous, documented puzzles** (the CRT trio,
+  Monty Hall, base-rate neglect, 9.11-vs-9.9, the canonical garden-path sentence), so on their
+  own they couldn't distinguish genuine reasoning from recalling a well-known answer. Round 6's
+  perturbation test addresses this for 7 of them, but wasn't run against every famous item used
+  earlier (snail-in-the-well, the piano riddle, and the trivia facts weren't retested this way)
 
 ---
 
@@ -325,6 +385,12 @@ Monty Hall, and the Mississippi letter count) were added too, for variety.
 - [x] Check for answer-letter position bias in the test set, and whether Jev is order-invariant
 - [x] Deliberately construct new questions designed to make Jev fail — found a real,
       reproducible miss (the two-timepoint age word problem) and added it to the game
+- [x] Test whether "resisted the trap" results reflect genuine reasoning or memorized answers
+      to famous puzzles, by perturbing numbers so the memorized answer is wrong — held up 7/7,
+      including the Monty Fall variant built specifically to catch reflexive pattern-matching
+- [ ] Extend the memorization check to the puzzles not yet perturbed (snail-in-the-well, the
+      piano riddle, the trivia facts) and to genuinely novel puzzle *shapes* with no famous
+      ancestor at all
 - [ ] **Proper Haiku (and other model) benchmark: speed, cost, and accuracy on the same
       19-question set**, measured via direct API calls with isolated timing (not
       agent-framework overhead) — needed before the game's Haiku column can show real numbers
