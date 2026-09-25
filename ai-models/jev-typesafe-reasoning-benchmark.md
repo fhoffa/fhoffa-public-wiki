@@ -154,6 +154,69 @@ tracked as a to-do below rather than guessed at now.
 
 ---
 
+## Round 4: Position Bias & a Real Miss
+
+Two follow-up questions prompted this round: **had Jev actually gotten anything wrong yet**,
+and **were the 14 game questions written with a bias toward certain answer letters?**
+
+The second question turned out to have an uncomfortable answer. Tallying the correct-answer
+letter across all 14 game questions:
+
+| Letter | Count |
+|---|---|
+| A | 4 |
+| B | 8 |
+| C | 2 |
+| D | 0 |
+| E | 0 |
+
+The correct answer was **B or A in 12 of 14 questions**, and **never D or E**. That's a bias
+in how the questions were authored, not evidence about Jev — but it meant the earlier 14/14
+score couldn't rule out Jev simply leaning toward early letters rather than reasoning about
+content.
+
+**Method:** each of the 14 questions was resent to `/v1/systemone` with its answer choices
+shuffled and the correct one deliberately relocated to **D** (or E for the 5-option vocab
+question), keeping the question text and all four/five answer texts identical. If Jev were
+pattern-matching letter position, moving the right answer to a chronically under-tested slot
+should hurt it.
+
+**Result: 13/14 still correct.** Most questions were unaffected — same answer, similar or
+even higher confidence, regardless of which letter the correct text was assigned to. That's
+evidence the model is generally keying off content, not letter position.
+
+**But one question flipped: the algebra item ("If 3x + 7 = 22, what is 6x + 14?").**
+
+| Ordering | Criteria | Jev's answer | Correct? | Confidence |
+|---|---|---|---|---|
+| Original | A: 22, B: 30, C: **44**, D: 50 | C | ✅ | 0.99 |
+| Rotated | A: 30, B: 22, C: 50, D: **44** | A | ❌ | 0.59 |
+
+Rerunning the rotated version 5 more times gave: **A, D, D, A, A** (probabilities each time
+sitting close to 50/50, e.g. `{A: 0.55, D: 0.45}`, `{A: 0.47, D: 0.53}`, `{A: 0.59, D: 0.41}`).
+Across 6 total calls on the rotated ordering, Jev answered correctly only twice. The likely
+mechanism: "30" is what you get from solving 3x+7=22 → x=5 → 6x=30, then forgetting to add
+the +14 — a genuine, plausible arithmetic slip, not a random error. What changed between the
+two tables isn't the math, only which answer text sits behind which letter and where the
+"30" decoy sits relative to it — yet it flipped the model between confidently right (0.99)
+and a coin flip (~0.5) on the exact same underlying problem.
+
+**Answering the original questions directly:**
+- **Yes, Jev has now gotten something wrong** — reliably, under a specific answer ordering,
+  it's close to a coin flip on the 3x+7=22 problem, and that's a real miss, not a fluke of
+  one unlucky call.
+- **The apparent "always A or B" pattern was a test-construction artifact**, not a property
+  of Jev — rotating the correct answer to D held for 13 of 14 questions with high confidence.
+  The one question that broke wasn't the one Jev was "biased toward getting right by
+  position" — it was a question already sitting near its own margin of confidence, where
+  surface-level answer framing was enough to tip it either way.
+
+The **Beat Jev** game has since been updated (v2) to render each question's answer choices in
+a random order every time it's played, so no fixed letter position is ever favored for human
+players either.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -174,14 +237,24 @@ tracked as a to-do below rather than guessed at now.
   a false "only one correct answer" premise, confidence dropped to 0.51 (its lowest of the
   whole test) with probability spread across the plausible candidates, rather than
   confidently committing to one — this is the behavior you want from a judge model
+- **Mostly robust to answer-order shuffling**: relocating the correct answer to the
+  least-tested letter position (D/E) held correct on 13 of 14 questions, evidence the model
+  is generally reasoning about content rather than pattern-matching letter position
 
 ⚠️ **Considerations:**
-- Sample size still modest (12 items across two rounds); no formal accuracy benchmark
-  (e.g. full SAT practice sets) run yet
+- Sample size still modest; no formal accuracy benchmark (e.g. full SAT practice sets) run yet
 - Only one obscure/flawed trivia item tested so far — worth confirming the ambiguity-detection
   behavior holds across more genuinely hard or ill-posed questions, not just this one case
 - Reading comprehension tested with a single passage/2 questions; unclear how it scales to
   longer passages or more questions per passage
+- **Not order-invariant on at least one item**: the 3x+7=22 algebra question swung from
+  confidently correct (0.99) to a near coin-flip (~0.5, wrong more often than not across 6
+  runs) purely from reordering which letter the correct answer sat behind. Confidence dropping
+  alongside the flip is the right behavior — it wasn't confidently wrong — but it shows the
+  model's answer to an *objectively fixed* math problem isn't fully stable to surface
+  presentation. Worth checking whether this is isolated to borderline-confidence items or a
+  broader pattern before trusting `choice` answers on arithmetic without a confidence-based
+  review threshold
 
 ---
 
@@ -190,9 +263,14 @@ tracked as a to-do below rather than guessed at now.
 - [x] Test SAT reading-comprehension passages (long `state`, multiple `choice` questions per passage)
 - [x] Push into harder Millionaire-ladder trivia (obscure/high-difficulty questions)
 - [x] Build a playable "Jev vs. human" game ([Beat Jev](https://claude.ai/artifact/UXkfKUS4tVW7HLzFTXtmp2))
+- [x] Check for answer-letter position bias in the test set, and whether Jev is order-invariant
 - [ ] **Proper Haiku (and other model) benchmark: speed, cost, and accuracy on the same 14-question set**,
       measured via direct API calls with isolated timing (not agent-framework overhead) —
       needed before the game's Haiku column can show real numbers
+- [ ] Investigate the algebra-question instability further: is it specific to that item, to
+      near-50/50-confidence items generally, or to arithmetic questions with a plausible
+      "forgot the last step" distractor? Try a few more order-rotated arithmetic questions
+      to see if the pattern generalizes
 - [ ] Try the `score` question type on a rubric-graded task
 - [ ] Run a larger, more systematic accuracy benchmark against a public SAT practice set
 - [ ] Compare `jev-latest` vs `jev-preview` on the same item set
