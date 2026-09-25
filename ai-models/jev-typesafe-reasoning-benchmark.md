@@ -415,6 +415,54 @@ interpretation in the other) rather than looking like random noise.
 
 ---
 
+## Round 8: Wait, AGIEval Could Be Memorized Too
+
+Fair pushback on round 7: AGIEval's SAT set isn't some obscure private test — it's been a
+**named, public benchmark since 2023**, cited constantly in eval papers and leaderboards, with
+its exact question-and-answer-key pairs sitting on GitHub the whole time. If anything, that
+makes it a *weaker* memorization-resistance test than the hand-invented puzzles in round 6, not
+a stronger one — the entire point of a published benchmark is that the correct answers are
+public right next to the questions.
+
+**Method:** take 10 of the correctly-answered AGIEval SAT Math items — clean, self-contained
+algebra with no figures or tables — and rewrite each with **entirely new numbers**, so the
+exact question text and its correct answer never appeared anywhere before this test. The
+underlying problem *template* (solve a linear equation, evaluate a function, solve a system,
+etc.) stays the same as the original AGIEval item; only the constants change. Each new correct
+answer was computed independently and double-checked before sending.
+
+| Template (based on AGIEval item) | New question | Correct | Jev | Correct? | Confidence |
+|---|---|---|---|---|---|
+| #0 | If (x-5)/6=k and k=4, what is x? | 29 | 29 | ✅ | 1.00 |
+| #43 | If 50-x=18, what is 4x? | 128 | 128 | ✅ | 0.88 |
+| #65 | If 5r=45, what is 3r+7? | 34 | 34 | ✅ | 0.90 |
+| #154 | 7ax+7b-4=24. What is ax+b? | 4 | 4 | ✅ | 0.99 |
+| #159 | If a-b=20 and b/4=6, what is a+b? | 68 | 68 | ✅ | 0.95 |
+| #209 | If 3w+2t=16 and 5w+4t=28, what is 2w+3t? | 14 | 14 | ✅ | 0.29 |
+| #199 | What x satisfies 4x+5=41? | 9 | 9 | ✅ | 0.98 |
+| #200 | If 3n/7=15, what is 2n-3? | 67 | 67 | ✅ | 0.88 |
+| #93 | Sum of three numbers is 720; x is 40% more than the sum of the other two. What is x? | 420 | **432** | ❌ | 0.98 |
+| #101 | sqrt(k+3)-x=0. If x=8, what is k? | 61 | 61 | ✅ | 0.87 |
+
+**9/10 correct**, on numbers that exist nowhere else — direct evidence that the round-7 result
+wasn't just recalling a published answer key, at least for this class of algebra problem: it's
+actually solving the equations.
+
+**The one miss is the interesting part.** The relational percent question ("x is 40% more than
+the sum of the other two") was answered wrong *and confidently* (432 instead of 420, 0.98
+confidence) — the same profile as the round-5 Mary age-problem miss: a word problem whose
+difficulty is in correctly parsing a comparative relationship ("N% more than," "twice as old as
+N years ago") rather than in the arithmetic itself. Every other miss in this benchmark so far
+has come with appropriately reduced confidence; this is now the **second** case of a
+confidently wrong answer on a relational-phrasing word problem, which starts to look like a
+real pattern rather than one unlucky question — worth targeted follow-up.
+
+Also notable: item #209 (the two-variable system) was correct but only 0.29 confidence — its
+lowest confident-and-correct score of this sub-test, suggesting systems of equations are
+harder for Jev even when it lands on the right answer.
+
+---
+
 ## Key Observations
 
 ✅ **Strengths:**
@@ -453,6 +501,12 @@ interpretation in the other) rather than looking like random noise.
   math / 97.1% English, with the best-calibrated confidence curve seen in this benchmark —
   0.939 average confidence when correct vs. 0.399 when wrong, and near-100% accuracy at every
   confidence bucket above 0.7
+- **The AGIEval math result isn't just a memorized answer key**: AGIEval has been a public
+  benchmark since 2023 with its exact Q&A pairs on GitHub, so passing it alone doesn't prove
+  reasoning. Rewriting 10 correctly-answered math items with entirely new numbers (never
+  published anywhere) and independently-verified new correct answers still went 9/10 — the
+  model is actually solving these equations, not recalling a published key, at least for this
+  class of algebra problem
 
 ⚠️ **Considerations:**
 - Only one obscure/flawed trivia item tested so far — worth confirming the ambiguity-detection
@@ -467,12 +521,14 @@ interpretation in the other) rather than looking like random noise.
   presentation. Worth checking whether this is isolated to borderline-confidence items or a
   broader pattern before trusting `choice` answers on arithmetic without a confidence-based
   review threshold
-- **A real, systematic miss on two-timepoint age word problems**: across 4 problem variants
-  and 8 total calls, Jev consistently answered with the age given for the *past* reference
-  point in the problem instead of solving for the age being asked about — including one
-  variant answered wrong with 0.84 confidence. This isn't noise; it's a specific shape of
-  word problem the model doesn't reliably solve, and worth treating as a known blind spot
-  rather than a fluke
+- **A recurring, confident weak spot on relational/comparative word problems**: the
+  two-timepoint age problem (round 5, 4 variants, 8 calls, wrong every time, one at 0.84
+  confidence) and the "x is 40% more than the sum of the other two" problem (round 8, wrong at
+  0.98 confidence) share a shape — both require correctly parsing a comparative relationship
+  ("twice as old as N years ago," "N% more than Y") rather than executing arithmetic once the
+  relationship is set up correctly, and both times Jev was confidently wrong rather than
+  appropriately uncertain. Two independent instances now; worth a dedicated round targeting
+  this specific problem shape rather than treating each as a one-off
 - **Most of the "resisted the trap" results used famous, documented puzzles** (the CRT trio,
   Monty Hall, base-rate neglect, 9.11-vs-9.9, the canonical garden-path sentence), so on their
   own they couldn't distinguish genuine reasoning from recalling a well-known answer. Round 6's
@@ -511,6 +567,17 @@ interpretation in the other) rather than looking like random noise.
 - [x] Run a larger, more systematic accuracy benchmark against a public SAT practice set —
       full AGIEval SAT Math + English (426 questions, real exam data): **97.9% accuracy**,
       well-calibrated confidence (0.94 avg when correct vs. 0.40 when wrong)
+- [x] Test whether the AGIEval result reflects a memorized public answer key rather than
+      genuine solving, by rewriting 10 correctly-answered math items with entirely new,
+      never-published numbers — held up 9/10, with the one miss matching the same
+      relational-word-problem weak spot found in round 5
+- [ ] Run the same never-published-numbers perturbation on AGIEval SAT *English* items
+      (harder, since passages can't be cleanly re-numbered, but worth designing a version of
+      this test for reading comprehension)
+- [ ] Dedicated round on relational/comparative word problems (the age-problem and
+      percent-relation shape): map how consistently this fails, whether it's specific to
+      "more than"/"as old as" phrasing, and whether restating the relationship more explicitly
+      fixes it
 - [ ] Try the `score` question type on a rubric-graded task
 - [ ] Compare `jev-latest` vs `jev-preview` on the same 426-question AGIEval set
 - [ ] Spot-check the other 8 AGIEval "misses" for source-data corruption like the bee-colony
