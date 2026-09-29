@@ -22,7 +22,13 @@
 201 speaker mentions across the catalog as of Sep 29, 2026 — 121 of them Descartes (60%), as expected at a user conference. Counts are directional: some affiliations parse as departments or titles rather than companies.
 
 - **Descartes (121):** Product Management, Professional Services, Solutions Consulting, Carrier Operations, plus executives across all five tracks. Descartes owns the roadmap and training narrative outright.
-- **Partners on stage:** Geotab (3 — Felipe, Adam, and Diego Pascoalino's camera-insights training session). Thin partner presence overall, which makes the Geotab co-presentation stand out.
+- **Sponsors on stage (8 of 30):** the sponsor-speaker overlap is bigger than it first looks —
+  - **Geotab (Gold, 3):** Felipe, Adam, and Diego Pascoalino's camera-insights training session.
+  - **Kharon (Gold, 1):** Howard Mendelsohn (President, Global Business Development and Engagement) — solo GTI session on sanctions/export-controls network intelligence.
+  - **Walmart Marketplace (Gold, 2 confirmed):** Seung Ro (Principal Product Manager) and Michael Klagge (Senior Manager, Technology Operations), both on ecommerce fulfillment/shipping sessions. Kohl Perkins (Group Director, Global Partnerships) headlines "How Top Sellers Win on Walmart Marketplace" with no published affiliation — very likely Walmart, which would make 3.
+  - **Silver:** Cover Genius — Richard McNish (EVP of Shipping); Globaleyes — Brooke Shiller (CEO); Sayari — Anne Marie Lacourse (Senior Consultant, Global Trade Management).
+  - **Bronze:** Amazon Supply Chain Services — Chris Miller (Manager, Tech BD Sales); EasyPost — Dutch Neerings (Director of Partnerships).
+- **A caveat on the counts:** 10 speakers have title-only affiliations with no published company (e.g. Sam Brown, "Senior Partner Manager"; Wesley Wilson, "Director, Customer Success"). Most sit on panels with Descartes co-speakers and read as Descartes staff, but the agenda doesn't say — so the partner/sponsor speaker count above is a floor, not a ceiling.
 - **Customers speaking — LSP/carrier side:** Expeditors, Echo Global Logistics, Traffix, RXO, Giltner Logistics, Schneider, Estes Express Lines, DSV Air & Sea, Mohawk Global Logistics, Carpool Logistics, Grandrock Freight, Swick Logistics, Eve International Logistics, Logistics Fox Freight Solutions.
 - **Customers speaking — shipper/retail side:** US Foods, Walmart Marketplace, Pet Supplies Plus, Williams-Sonoma, White Cap, HD Supply, SRS Distribution, Bass Pro Shops, Best Buy Canada, Medline Industries, Heartland Coca-Cola Bottling, Tillamook County Creamery, Dairy Farmers of America, Shure, Syensqo, Parr Lumber, Richards Building Supply, Capital Audio Electronics, The AGL Group.
 - **Parcel/ecommerce:** UPS, Amazon Supply Chain Services, EasyPost.
@@ -50,7 +56,7 @@ What this means for the room: intent is unusually high. Nobody drifts into a 4:3
 - **Bronze (20):** Amazon Supply Chain Services, Brother International Corporation, CloneOps.ai, DecisionPoint Technologies, DocUnlock, EasyPost, FleetWorks, Fleetworthy, Levata, Loop, Lytx, Microsoft, NetSuite, OneRail, Roanoke Insurance Group, Sign In App, SMC3, Sygic, Vooma, Inc., Zebra
 - **Consultant (2):** Braumiller Consulting Group, LLC, Skill Dynamics
 
-What this means for the room: Geotab is one of three Gold sponsors *and* a featured exhibitor — the session carries a top-tier sponsor's weight, not just a breakout slot. Sponsor presence centers on the Tech Fair (Tue 6–9 PM, Grand Ballroom DEFGH). Expect sponsor badge-holders in sessions: they're working the room, and several (Lytx, Fleetworthy, Sygic, FleetWorks) play directly in fleet/telematics — good booth conversations after the talk. Note the overlap: Walmart Marketplace, EasyPost, Amazon Supply Chain Services, Globaleyes, and Sayari both sponsor *and* speak.
+What this means for the room: Geotab is one of three Gold sponsors *and* a featured exhibitor — the session carries a top-tier sponsor's weight, not just a breakout slot. But all three Gold sponsors speak (Geotab 3, Kharon 1, Walmart Marketplace 2+), and 8 of 30 sponsors have someone on stage — so a sponsor badge alone doesn't differentiate; the *content* contrast (open protocol vs. single-vendor AI) is what has to land. Sponsor presence centers on the Tech Fair (Tue 6–9 PM, Grand Ballroom DEFGH). Expect sponsor badge-holders in sessions: they're working the room, and several (Lytx, Fleetworthy, Sygic, FleetWorks) play directly in fleet/telematics — good booth conversations after the talk.
 
 ## Why they're there (jobs to be done)
 
