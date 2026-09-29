@@ -16,7 +16,7 @@
 - Featured (keynote, tech fair)
 
 ## About this data
-- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions listed with speakers; descriptions captured for morning sessions and several afternoon panels (remaining Tue PM descriptions in extraction). **Wednesday 10/7:** 87 sessions on site; the list below covers most blocks, full descriptions captured for 9 substantive sessions, training/roadmap descriptions largely pending extraction. **Thursday 10/8:** 14 sessions; list complete with descriptions.
+- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions listed with speakers; descriptions captured for morning sessions and several afternoon panels (remaining Tue PM descriptions in extraction). **Wednesday 10/7:** 87 sessions on site; the list below covers most blocks, full descriptions captured for 9 substantive sessions, training/roadmap descriptions largely pending extraction. **Thursday 10/8:** 14 sessions; fully verified Sep 29, 2026 — times, rooms, speakers, verbatim descriptions.
 - Speaker lists for sessions without opened detail dialogs come from the agenda list view and may be incomplete — in several cases the detail dialog revealed additional speakers beyond the list view.
 - Two session titles were truncated in the list view (marked …).
 - Some times, rooms, and titles differ between the two passes (the agenda appears to have been updated between passes); conflicts are noted inline. Where the passes disagree on track labels, the first pass (read from the site's track pills) is kept.
@@ -358,15 +358,15 @@ Speakers: Felipe Hoffa (Principal Data & AI Intelligence Advocate, Geotab); Adam
 
 ---
 
-## Thursday, October 8, 2026 (14 sessions observed on site)
+## Thursday, October 8, 2026 (14 sessions — fully verified Sep 29, 2026)
 
-**7:00 AM–8:00 AM — Registration Desk** — Grand Ballroom [Foyer] · [06]
+**7:45 AM–1:00 PM — Registration Desk** — Grand Ballroom [Foyer] · [06]
 *No description published.*
 
 **8:00 AM–9:00 AM — Conference Breakfast** — Grand Ballroom DEFGH · [06]
 *No description published.*
 
-**9:00 AM–9:45 AM — [Fleet] Focus Group – Part 1** — Rosemont Ballroom A · [01] Fleet Performance Management [RMT]
+**9:00 AM–9:45 AM — [Fleet] Focus Group – Part 1: Turning Fleet Data into Operational Insight** — Rosemont Ballroom A · [01] Fleet Performance Management [RMT]
 Speakers: Henrique Miranda (Director, Product Management); Kim Bruno (Product Manager); Matt Gruden
 > This working session opens with the operational questions fleet teams are trying to answer, where the data available today falls short, and which insights, metrics, and workflows would create the greatest value. Participants compare approaches with peers and with the Descartes product team.
 
@@ -377,13 +377,14 @@ Speakers: Henrique Miranda (Director, Product Management); Kim Bruno (Product Ma
 **9:00 AM–9:45 AM — [LSP] IoT: Descartes RFID™ Case Study 3** — United AB · [02]
 Speaker: Simon Gutschlag (VP, Product Management, Descartes)
 > This case study shows how Descartes RFID is applied in a real-world Internet of Things (IoT) use case, with lessons on implementation, operational visibility, outcomes, and adoption considerations.
-*(First pass listed this as 9:00 AM–4:00 PM in Midway; time/room updated per later dialog read.)*
 
-**9:00 AM–5:00 PM — [TM] Book Time with a Product Expert / Customer Meetings** — Rosemont Ballroom CD · [04]
+**9:00 AM–10:30 AM — [TM] Book Time with a Product Expert / Customer Meetings** — Room not listed · [04]
 *No speakers listed.*
+> These timeslots are reserved for attendees to book dedicated time with Descartes experts. Use this opportunity to explore demos, discuss product questions, receive solution consulting, or hold focused meetings.
 
-**9:00 AM–5:00 PM — [Ecom] Meetings | Workshops | Focus Groups** — DFW AB · [05]
+**9:00 AM–10:30 AM — [Ecom] Meetings | Workshops | Focus Groups** — Room not listed · [05]
 *No speakers listed.*
+*Site shows placeholder "Description coming soon." — no published description yet.*
 
 **9:45 AM–10:30 AM — [Fleet] Focus Group – Part 2: Applying AI Agents to Route Optimization** — Rosemont Ballroom A · [01]
 Speakers: Henrique Miranda (Director, Product Management, Descartes); Matt Gruden (Product Manager, Descartes); Kim Bruno (Product Manager, Descartes)
@@ -396,16 +397,17 @@ Speakers: Henrique Miranda (Director, Product Management, Descartes); Matt Grude
 Speakers: Henrique Miranda (Director, Product Management, Descartes); Matt Gruden (Product Manager, Descartes); Kim Bruno (Product Manager, Descartes); Marco Sponza (Senior Product Manager, Descartes)
 > This part of the focus group draws the discussion together: which use cases carry the highest value, what operators need in place before they can act on agent-generated recommendations, and which opportunities matter most for future development.
 
-**11:30 AM–12:30 PM — [TM] Book Time with a Product Expert / Customer Meetings (Copy)** — Rosemont Ballroom CD · [04]
+**10:45 AM–12:15 PM — [TM] Book Time with a Product Expert / Customer Meetings (Copy)** — Room not listed · [04]
 *No speakers listed.*
+> These timeslots are reserved for attendees to book dedicated time with Descartes experts. Use this opportunity to explore demos, discuss product questions, receive solution consulting, or hold focused meetings.
 
-**11:30 AM–12:30 PM — [Ecom] Meetings | Workshops | Focus Groups** — DFW AB · [05]
+**10:45 AM–12:15 PM — [Ecom] Meetings | Workshops | Focus Groups** — Room not listed · [05]
 *No speakers listed.*
+*Site shows placeholder "Description coming soon." — no published description yet.*
 
 **11:30 AM–12:15 PM — [Fleet] Workshop – Driver Engagement** — Rosemont Ballroom A · [01]
 Speakers: Jonathan Bikowski (Director, Customer Experience, Descartes); Kieran Wilson (Senior Product Manager, Descartes); Kim Bruno (Product Manager, Descartes)
 > This interactive workshop examines how a more complete view of the driver could strengthen engagement, coaching, safety, and performance. Participants share what is working in their own operations and help define where connected driver insights and a Driver 360 view would add the most value.
-*(First pass listed a "Descartes Mobile™" workshop in this slot; updated per later dialog read.)*
 
-**12:30 PM–1:15 PM — Conference Lunch** — Grand Ballroom DEFGH · [06]
+**12:15 PM–1:15 PM — Conference Lunch** — Grand Ballroom DEFGH · [06]
 *No description published.*
