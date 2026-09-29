@@ -20,5 +20,5 @@ Descartes restructured the event agenda mid-extraction:
 
 ## Related threads
 
-- Geotab MCP connection remains blocked: the connect flow demands a manual Client ID despite Geotab supporting dynamic client registration (server side verified working). Broken-behavior report filed with the Muse team.
+- Geotab MCP connection remains blocked **in Meta Muse only**: Muse's connect screen demands a manual Client ID despite Geotab's MCP server supporting dynamic client registration — verified working server-side, and the server connects fine through other MCP clients. The blocker is Muse's connect flow, not Geotab. Broken-behavior report filed with the Muse team.
 - Tech Fair (Tue 6–9 PM, Grand Ballroom DEFGH) is the week's main networking event — open bar, heavy hors d'oeuvres, carving and pasta stations.

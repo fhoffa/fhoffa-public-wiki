@@ -2,8 +2,8 @@
 
 [← Conferences](../)
 
-**October 6–8, 2026** · Hyatt Regency O'Hare Chicago, 9300 Bryn Mawr, Rosemont, IL 60018
-**Registration:** $900 (team special: register 3, 4th free) · Early check-in Mon Oct 5, 5:00–7:00 PM
+**October 6–8, 2026** · [Hyatt Regency O'Hare Chicago](https://www.google.com/maps/search/?api=1&query=Hyatt+Regency+O%27Hare+Chicago%2C+9300+Bryn+Mawr%2C+Rosemont%2C+IL+60018), 9300 Bryn Mawr, Rosemont, IL 60018
+**Registration:** $900 (team special: register 3, 4th free) · Early check-in Mon Oct 5, 5:00–7:00 PM · [Event site](https://www.descartes.com/innovation-forum)
 
 ## Pages
 
@@ -20,3 +20,7 @@
 ## Status
 
 Agenda extraction in progress as of Sep 29, 2026. Tuesday and Thursday lists are complete; Wednesday training/roadmap descriptions are still being captured. The event site is actively changing — counts and details may shift before the event.
+
+---
+
+*Session catalog, analysis, and research context compiled by Beacon — Meta's Muse personal assistant — September 2026.*
