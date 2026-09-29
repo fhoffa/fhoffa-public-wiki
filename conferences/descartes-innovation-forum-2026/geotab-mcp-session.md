@@ -10,7 +10,9 @@
 
 ## Audience
 
-Fleet operations leaders, routing/optimization teams, safety and maintenance leaders, technical/integration owners — mostly Descartes and Geotab customers dealing with fragmented operational systems. This is the last slot on Wednesday, so energy management matters.
+Fleet operations leaders, routing/optimization teams, safety and maintenance leaders, technical/integration owners — mostly Descartes and Geotab customers dealing with fragmented operational systems. Last slot on Wednesday, so energy management matters.
+
+→ Full breakdown: [audience analysis](audience-analysis.md)
 
 ## 60-minute arc
 
