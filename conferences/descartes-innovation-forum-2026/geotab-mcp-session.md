@@ -1,3 +1,5 @@
+[← 2026 Descartes Innovation Forum](README.md)
+
 # [Fleet] Connecting AI to Action: Exploring Geotab AI Insights and MCP
 
 **Wednesday, October 7, 2026, 4:30–5:30 PM CT · United A · [01] Fleet Performance Management**
@@ -38,3 +40,7 @@ Weave Q&A throughout rather than saving it for 5:25 PM. Aim to finish two minute
 - [ ] Print three backup audience questions
 - [ ] Drill the "you talk while I type" demo handoffs — that's where co-presentations die
 - [ ] Confirm the Geotab AI Insights demo environment / credentials the week before
+
+---
+
+**Related:** [Audience analysis](audience-analysis.md) · [Session catalog](agenda.md) · [Research notes](research-notes.md) · [Event overview](README.md)
