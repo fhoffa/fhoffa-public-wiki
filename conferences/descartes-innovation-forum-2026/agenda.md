@@ -1,10 +1,12 @@
+[← 2026 Descartes Innovation Forum](README.md)
+
 # 2026 Descartes Innovation Forum — Session Catalog
 
 **Event:** 2026 Descartes Innovation Forum
 **Dates:** October 6–8, 2026, 8:00 AM–6:00 PM CT (early check-in Monday, October 5)
 **Venue:** Hyatt Regency O'Hare Chicago, 9300 Bryn Mawr, Rosemont, IL 60018
 **Registration:** $900 (team special: register 3, 4th free)
-**Sessions:** 149 total — Mon 10/5: 1 · Tue 10/6: 47 · Wed 10/7: 87 · Thu 10/8: 14
+**Sessions:** 112 total — Mon 10/5: 1 · Tue 10/6: 47 · Wed 10/7: 50 · Thu 10/8: 14
 
 ## Tracks
 - [01] Fleet Performance Management [RMT]
@@ -16,7 +18,7 @@
 - Featured (keynote, tech fair)
 
 ## About this data
-- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions listed with speakers; descriptions captured for morning sessions and several afternoon panels (remaining Tue PM descriptions in extraction). **Wednesday 10/7:** 87 sessions on site; the list below covers most blocks, full descriptions captured for 9 substantive sessions, training/roadmap descriptions largely pending extraction. **Thursday 10/8:** 14 sessions; fully verified Sep 29, 2026 — times, rooms, speakers, verbatim descriptions.
+- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions verified on site; verbatim descriptions captured for every session except two with no published description. **Wednesday 10/7:** 50 sessions on the live tab; morning 35 fully verified Sep 29, 2026 with verbatim descriptions (7 Fleet trainings show no room on site); afternoon/evening extraction in progress. **Thursday 10/8:** 14 sessions; fully verified Sep 29, 2026 — times, rooms, speakers, verbatim descriptions.
 - Speaker lists for sessions without opened detail dialogs come from the agenda list view and may be incomplete — in several cases the detail dialog revealed additional speakers beyond the list view.
 - Two session titles were truncated in the list view (marked …).
 - Some times, rooms, and titles differ between the two passes (the agenda appears to have been updated between passes); conflicts are noted inline. Where the passes disagree on track labels, the first pass (read from the site's track pills) is kept.
@@ -30,7 +32,7 @@
 
 ---
 
-## Tuesday, October 6, 2026 (47 sessions)
+## Tuesday, October 6, 2026 (47 sessions — fully verified Sep 29, 2026)
 
 **7:00 AM–5:30 PM — Registration Desk** — Grand Ballroom [Foyer] · [06]
 *No description published.*
@@ -91,27 +93,36 @@ Speakers: Akiva Weinberger (Chief Operating Officer, Prune); Abe Harari (Directo
 
 **1:15 PM–2:00 PM — [Fleet] From Data to Decisions – Turning Intelligence into Results** — Grand Ballroom BC · [01]
 Speakers: David Sordo (Director Logistics Optimization, Dairy Farmers of America); Jill Vieau (Logistics Planner)
+> The difference between good and great performance is how data is turned into action. Uncover best practices and shared insights from leading teams using intelligence to sharpen decisions, improve routing, and drive measurable results across the operation.
 
 **1:15 PM–2:00 PM — [LSP] CEO Spotlight: Logistics Service Providers at a Crossroads** — Rosemont Ballroom AB · [02]
 Speakers: Adrian Gonzalez (President, Adelante SCM); Chris Bachinski (Co-CEO & President, GHY International)
+> Shifting customer expectations, margin pressure, evolving trade regulations, artificial intelligence (AI) and automation, and continued market uncertainty are forcing logistics service providers to rethink how they compete, operate, and grow. In this executive panel, CEOs and industry leaders share their perspectives on the forces reshaping the industry and the strategic decisions that will define the next generation of logistics providers.
 
 **1:15 PM–2:00 PM — [GTI] The Intelligent Trade Compliance Function: The Case for AI – and the Controls it Demands** — Rosemont Ballroom B · [03]
 Speakers: David Lim (Partner, Economic Sanctions & Export Controls, White & Case LLP); Karla Haynes (Vice President & Deputy General Counsel, Global Trade Compliance, Cisco Systems, Inc.)
+> Artificial intelligence is moving from pilot to production in trade compliance, promising faster classification, sharper screening, and analysts freed from repetitive review. It also raises a harder question: what has to be true before a compliance function can act on an AI-generated decision? This panel brings together outside counsel, a corporate compliance leader, and a data and risk-intelligence provider to map where AI is delivering real value today, where human judgment remains essential, and the validation, explainability, and audit evidence a defensible program requires.
 
 **1:15 PM–2:00 PM — [TM] Carrier Vetting, Compliance, and In-Transit Risk Monitoring** — Rosemont Ballroom D · [04]
 Speakers: Michael Tringali (Eve International Logistics); Amy Musante (Automotive Claims Adjuster, Carpool Logistics LLC)
+> As fraud continues to evolve and negligent carrier hiring risk grows, hear how transportation teams are strengthening carrier vetting, compliance checks, and in-transit controls to protect freight and reduce risk without slowing down service.
 
 **1:15 PM–2:00 PM — [TM] Shipper TMS Optimization: Planning Rating, and Consolidation** — Rosemont Ballroom C · (no track pill shown)
 Speakers: Tom Gaffney (Motor Carrier Relations, DSV Air & Sea Inc.); Abigail Smith (Supply Chain Systems Manager, Bass Pro Shops)
+> With diesel prices and transportation rates at historically high levels, this session shares practical ways customers are improving planning, rating, and consolidation to reduce costs, tighten execution, and make better decisions faster.
 
 **1:15 PM–2:00 PM — [Ecom] Demand Forecasting and Inventory Planning Strategy** — DFW AB · [05]
 Speakers: Ben Rees (Senior Solutions Consultant, Descartes); Sam Brown (Senior Partner Manager)
+> For years, ecommerce inventory planning has revolved around a deceptively simple question: How much are we going to sell? Artificial intelligence is getting better at helping businesses analyze data and answer that question. But for growing ecommerce sellers, predicting demand is only half of the challenge. What should we do about it from an inventory planning perspective?
 
 **2:00 PM–2:45 PM — [Fleet] Always Connected – Real-Time Visibility from Dispatch to Dock** — Grand Ballroom BC · [01]
 Speakers: Ralph Henderson (Executive Producer, SupplyChainBrain); David Qualls (VP of Operations, Parr Lumber)
+> The gap between planning and execution creates constant pressure on service and operations. Leading fleets are using real-time visibility to stay ahead of disruptions, improve service consistency, and drive more predictable, on-time performance across the entire delivery lifecycle.
 
 **2:00 PM–2:45 PM — [LSP] Scaling Smart: APIs, AI, and Where to Invest Next** — Rosemont Ballroom AB · [02]
 Speakers: Stephen Zambo (CEO & Founder, The AGL Group); David Mitchell (Customer Solutions Manager, Canada, Expeditors)
+> Shifting customer expectations, margin pressure, evolving trade regulations, artificial intelligence (AI) and automation, and continued market uncertainty are forcing logistics service providers to rethink how they compete, operate, and grow. In this executive panel, CEOs and industry leaders share their perspectives on the forces reshaping the industry and the strategic decisions that will define the next generation of logistics providers.
+*(Site publishes this description verbatim for both this session and the CEO Spotlight — confirmed across two independent loads; not a capture error.)*
 
 **2:00 PM–2:45 PM — [GTI] From Data to Detention: How CBP Identifies and Targets High-Risk Shipments** — Rosemont Ballroom B · [03]
 Speakers: Valerie Sorensen-Clark (Partner, Grunfeld Desiderio Lebowitz Silverman & Klestadt LLP); Simran Sethi (Senior Industry Solutions Consultant, Descartes)
@@ -119,68 +130,88 @@ Speakers: Valerie Sorensen-Clark (Partner, Grunfeld Desiderio Lebowitz Silverman
 
 **2:00 PM–2:45 PM — [TM] From Visibility to Action: Exceptions, ETAs, Communication, and Service Recovery** — Rosemont Ballroom D · [04]
 Speakers: Helen Borochov (National Executive Advisor, Nippon Express USA, Inc.); Chad Merchison (Manager – Supply Chain Operations & Transportation, Best Buy Canada)
+> Visibility alone is not enough. Learn how leading companies turn real-time tracking into faster exception response, more accurate ETAs, better customer communication, and stronger service recovery when loads go off plan.
 
 **2:00 PM–2:45 PM — [TM] Winning with LTL: Practical Strategies for Brokerage Growth** — Rosemont Ballroom C · (no track pill shown)
 Speakers: Justin Latz (Director of Strategy, Advance Transportation Systems, Inc.); Wesley Wilson (Director, Customer Success)
+> LTL creates valuable growth opportunities for freight brokers but also adds complexity across pricing, carrier selection, execution, visibility, and customer service. In this customer panel, brokerage leaders will share practical strategies for streamlining workflows, supporting teams, strengthening carrier relationships, and maintaining service quality as volumes grow.
 
 **2:00 PM–2:45 PM — [Ecom] Fireside Chat: Scaling Multichannel Marketplace Compliance** — DFW AB · [05]
 Speakers: Mendy Lieberman (Co-Founder and CEO, Prune); Gary Basko (Senior Account Executive, Descartes)
+> In this interactive session, explore strategies for maintaining accurate listings, synchronized inventory, reliable fulfillment, and effective documentation across marketplaces. Hear stories from Prune about managing marketplace requirements as channels, catalogs, and order volumes grew. Find practical approaches to preventing compliance problems, responding to enforcement issues, and expanding into new channels without losing operational control.
 
 **2:45 PM–3:30 PM — [Fleet] From Safety Data to Safer Decisions** — Grand Ballroom BC · [01]
 Speakers: Tim Eckhardt (Sr. Director of Safety, Dot Transportation, Inc.); Tom Moore (Executive Vice President, National Private Truck Council)
+*No description published (site shows “Description coming soon.”).*
 
 **2:45 PM–3:30 PM — [LSP] Beyond Duty Deferral: Using FTZs to Reshape Trade Strategy** — Rosemont Ballroom AB · [02]
 Speakers: Trey Boring (IMS Worldwide, Inc.); Deldric Williams (VP of Operations)
+> Foreign Trade Zones (FTZs) have become an important part of broader supply chain and trade strategies. This session examines how companies are leveraging FTZs to improve operational flexibility, manage tariff exposure, support manufacturing, and strengthen resilience. Industry experts discuss current trends, implementation considerations, and the strategic opportunities FTZs offer in today’s dynamic trade environment.
 
 **2:45 PM–3:30 PM — [GTI] Export Enforcement Risk is Now Enterprise Risk: BIS enforcement priorities, third-country dive…** — Rosemont Ballroom B · [03]
 Speakers: Matt Axelrod (Partner, Gibson Dunn); Jackson Wood (Director, Industry Solutions, Descartes)
+> A clean end user no longer ends the inquiry. The Bureau of Industry and Security (BIS) has concentrated enforcement on China and on advanced dual-use technology, artificial intelligence (AI) and semiconductors in particular, while diversion and transshipment increasingly run through third countries and intermediary networks that look unremarkable on paper. That shift raises the bar in three places: • The due diligence and Know Your Customer (KYC) practices an effective compliance program is now expected to run • The data, intelligence, and interagency coordination behind enforcement actions • The voluntary self-disclosure calculus, and how it is changing It also looks ahead to wider controls, broader liability, and where enforcement priorities move next.
 *Title truncated in list view; full title in session detail.*
 
 **2:45 PM–3:30 PM — [TM] Automating Brokerage Operations Across the Shipment Lifecycle** — Rosemont Ballroom D · [04]
 Speakers: Ashley Ruffner (Director of Logistics Development, WEL Companies, Inc.); Vladimir "Tommy" Djordjevic (General Manager, Swick Logistics LLC)
+> For brokers facing tighter margins and rising service expectations, this session highlights practical automation strategies that reduce touches from order to cash, improve execution speed, and help teams scale without adding complexity.
 
 **2:45 PM–3:30 PM — [TM] Performance Intelligence, Scorecards, and Analytics to Drive Decision-Making for Shippers** — Rosemont Ballroom C · (no track pill shown)
 Speakers: Amber Burris (Logistics Manager, Tillamook County Creamery Association); Jugad Sidhu (Director, Transportation Technology and Operations, Medline Industries)
+> When supply chains are volatile, better decisions depend on better signals. This session shows how actionable scorecards and analytics help teams spot risk sooner, improve service performance, and make faster operational decisions with confidence.
 
 **2:45 PM–3:30 PM — [Ecom] Leveraging Agentic AI to Optimize Ecommerce** — DFW AB · [05]
 Speaker: Akiva Weinberger (Chief Operating Officer, Prune)
+> AI can do more than answer questions—it can help ecommerce teams take action. In this practical session, Akiva Weinberger, COO of Prune, explores how agentic AI differs from traditional automation and AI assistants, and how ecommerce businesses can put agents to work while keeping people in control. Drawing on real-world ecommerce operations, Akiva will demonstrate agentic workflows for challenges such as marketplace listings and aging inventory, including how agents can analyze data, recommend actions, use specialized tools, and route decisions to a human for approval. Attendees will leave with a practical framework for identifying good AI use cases, setting appropriate guardrails, and starting small with workflows that can deliver measurable business impact. The core principle: automate the tasks, delegate the jobs, and keep people accountable for the decisions.
 
 **3:30 PM–3:45 PM — Afternoon Break** — Grand Ballroom [Foyer] · [06]
 *No description published.*
 
 **3:45 PM–4:30 PM — [Fleet] Beyond the Blind Spot: Protecting Drivers, Assets, and the Operation** — Grand Ballroom BC · [01]
 Speakers: Curtis Akerman (Distribution Solutions Manager, Heartland Coca-Cola Bottling); Jenny Vetter (Richards Building Supply)
+> When something goes wrong across the fleet, how quickly can you understand what happened and take action? Hear how leading fleets are connecting telematics, operational data, and delivery evidence to protect drivers, uncover root causes, and resolve issues with confidence. See how cameras and connected intelligence can close the next blind spot, helping fleets move from investigation toward prevention.
 
 **3:45 PM–4:30 PM — [LSP] The Politicization of Tariffs: Navigating the Compliance Impact** — Rosemont Ballroom AB · [02]
 Speakers: Katelyn Hilferty (Partner, Morgan Lewis); Stephanie Holloway (Director, Customs Operations, The Americas, Expeditors)
+> Tariffs are increasingly shaped by political priorities, creating new challenges for importers, customs brokers, and logistics providers. Industry experts examine how tariff policy, enforcement, and geopolitical tensions are changing the compliance landscape. The session explores practical strategies for managing risk, advising customers through uncertainty, and adapting operations as trade policy continues to shift.
 
 **3:45 PM–4:30 PM — [GTI] The Hidden Risk Layer: Using Network Intelligence to Identify and Mitigate Sanctions, Export C…** — Rosemont Ballroom B · [03]
 Speaker: Howard Mendelsohn (President, Global Business Development and Engagement, Kharon)
+> Sanctions evasion, export controls evasion, and supply chain risk rarely surface as a name on a government list — they hide within complex and opaque ownership, distribution, and supplier networks, and are often difficult to detect. This session examines how network intelligence, grounded in deep, open-source data, can illuminate those hidden connections, sharpen risk detection, and strengthen risk controls: • Leveraging AI and network intelligence to effectively detect risk across customers, distributors, resellers and suppliers • Real-world case studies of sanctions and export controls evasion and supply chain risk
 *Title truncated in list view; full title in session detail.*
 
 **3:45 PM–4:30 PM — [TM] AI-Assisted Brokerage Operations Customer Panel** — Rosemont Ballroom D · [04]
 Speakers: John Hall (Grandrock Freight Co.); Ben Fauver (Logistics Fox Freight Solutions)
+> As freight brokers and 3PLs balance speed, service, margin, and risk, this session looks at how AI can improve carrier engagement, close tracking gaps, automate document capture, and help teams respond faster when communications break down.
 
 **3:45 PM–4:30 PM — [TM] Saying "Yes" More: How Quantix, and PSA BDP Grew Managed Transportation with a Flexible TMS** — Rosemont Ballroom C · (no track pill shown)
 Speakers: Stephanie Tomlinson (Executive Director – Surface); Wayne Wolfe (Director, Domestic Services, Mohawk Global Logistics)
+> Every new customer brings new opportunities—they also bring new requirements and operational complexity. Explore how leading managed transportation providers use flexible workflows to turn their TMS into a competitive advantage for winning and retaining more shippers.
 
 **3:45 PM–4:30 PM — [Ecom] Five Shipping Problems Worth Solving in 2026** — DFW AB · [05]
 Speakers: Richard McNish (EVP of Shipping, Cover Genius); Ronald Lee (Vice President, Descartes)
+> Shipping challenges rarely occur in isolation. Global disruptions, rising costs, carrier constraints, disconnected systems, and delivery failures can quickly affect margins and customer loyalty. Join industry leaders and experienced shippers to explore five problems worth solving in 2026—and practical strategies for building more resilient, efficient, and adaptable shipping operations.
 
 **4:30 PM–5:30 PM — [Fleet] Digital Transformation in an AI Era – From Strategy to Impact** — Grand Ballroom BC · [01]
 Speakers: Dan Schuberth (Chief Revenue Officer, National Association of Wholesalers|Distributors); Brian James (Sr. Director, Pricing and Analysis, Estes Express Lines)
+> AI is no longer optional but knowing where to start and how to scale remains a challenge. Organizations are prioritizing AI within broader digital transformation efforts, aligning teams, and turning strategy into measurable impact across their operations.
 
 **4:30 PM–5:30 PM — [LSP] Life After De Minimis: How the Trade Community Is Adapting** — Rosemont Ballroom AB · [02]
 Speaker: Edward (Ned) Steiner (Managing Director, International Trade & Government Relations, Sandler, Travis & Rosenberg)
+> Recent changes to de minimis policies have created significant operational and compliance challenges for importers, customs brokers, and logistics providers. This session explores how organizations are adapting to new requirements, adjusting cross-border fulfillment strategies, and maintaining efficient trade flows. Learn concrete approaches for managing compliance, supporting customers, and preparing for further change in a still-shifting regulatory environment.
 
 **4:30 PM–5:30 PM — [GTI] From Tools to Intelligence: The Future of Trade Compliance Platforms** — Rosemont Ballroom B · [03]
 Speaker: Anne Van de Heetkamp (VP, Product Management)
+> Trade compliance software began as a set of tools: screening here, classification there, filings somewhere else. What organizations increasingly need is intelligence, connected data that answers a question rather than a feature that performs a task. This session takes the high-level view of where that shift is heading and what it will ask of compliance teams, then sets out the themes and priorities shaping the Global Trade Intelligence roadmap, artificial intelligence (AI) enhancements among them. It is the frame for the detailed product sessions and training that follow.
 
 **4:30 PM–5:30 PM — [TM] Interactive Roundtables for Transportation Management** — Rosemont Ballroom CD · [04]
 *No speakers listed.*
+> Choose a table and join shippers, freight brokers, 3PLs, and industry experts for an interactive discussion on today’s most relevant transportation management topics. Share challenges, exchange ideas, and connect with peers on what is most important to you.
 
 **4:30 PM–5:30 PM — [Ecom] How Top Sellers Win on Walmart Marketplace** — DFW AB · [05]
 Speaker: Kohl Perkins (Group Director, Global Partnerships)
+*No description published.*
 
 **5:30 PM–6:00 PM — Transition to Tech Fair** — Grand Ballroom [Foyer] · [06]
 *No description published.*
@@ -190,12 +221,12 @@ Speaker: Kohl Perkins (Group Director, Global Partnerships)
 
 ---
 
-## Wednesday, October 7, 2026 (87 sessions observed on site; list below is partial — morning blocks only, ~78 training/roadmap sessions not individually enumerated)
+## Wednesday, October 7, 2026 (50 sessions on live tab — morning fully verified Sep 29, 2026; afternoon extraction pending)
 
-**7:45 AM — Registration Desk** — Grand Ballroom [Foyer] · [06]
+**7:45 AM–5:30 PM — Registration Desk** — Grand Ballroom [Foyer] · [06]
 *No description published.*
 
-**8:00 AM — Conference Breakfast** — Grand Ballroom DEFGH · [06]
+**8:00 AM–9:00 AM — Conference Breakfast** — Grand Ballroom DEFGH · [06]
 *No description published.*
 
 **9:00 AM–10:00 AM — [Fleet] Fleet Data Intelligence and AI Agents: Turning Fleet Data into Action** · [01]
@@ -212,98 +243,126 @@ Speakers: Peter Mazzeratti (Associate Director, Global Trade Compliance, Shure I
 *(First pass listed this as "Day 2 Welcome and Enterprise Screening"; title updated per later dialog read.)*
 
 **9:00 AM–10:00 AM — [TM] Training: Descartes Tai TMS – A Guided Introduction** — Rosemont Ballroom D · [04]
-Speakers: Robert Henritze (Director, Solutions Consulting); Tim Lucas (Senior Product Manager)
+Speakers: Robert Henritze (Director, Solutions Consulting, Descartes); Tim Lucas (Senior Product Manager, Descartes)
+> Explore Descartes Tai TMS through a guided demonstration of its core capabilities and workflows. This introductory session will provide a foundational view of how the platform supports the full freight brokerage lifecycle and connects key processes across daily operations.
 
-**9:00 AM–10:00 AM — [TM] Training: Descartes 3G TMS™ – Optimized TMS Workflows** — Rosemont Ballroom C
-Speakers: Hannah Humble (Senior Implementation Consultant); Tanvir Chouhan (Senior Solutions Consultant)
+**9:00 AM–10:00 AM — [TM] Training: Descartes 3G TMS™ – Optimized TMS Workflows** — Rosemont Ballroom C · [04]
+Speakers: Hannah Humble (Senior Implementation Consultant, Descartes); Tanvir Chouhan (Senior Solutions Consultant, Descartes)
+> Participate in classroom-style training for shippers and 3PLs using Descartes 3G TMS™ to optimize workflows across the order lifecycle. We’ll focus on multimodal transportation, including planning, consolidation, multi-stop, and automation.
 
 **9:00 AM–10:00 AM — [Ecom] Walmart Multichannel Solutions: Simplify Fulfillment. Scale Across Channels.** — McCarran A · [05]
 Speaker: Seung Ro (Principal Product Manager, Walmart Marketplace)
-> Discover how Multichannel Solutions (MCS) can simplify fulfillment across multiple sales channels and help sellers scale their business. We'll explore MCS capabilities, the value it brings to multichannel operations, and how sellers can use MCS to create more efficient fulfillment workflows. We'll then bring the experience to life with a demonstration highlighting MCS in action, including connectivity through Sellercloud.
+> Discover how Multichannel Solutions (MCS) can simplify fulfillment across multiple sales channels and help sellers scale their business. We’ll explore MCS capabilities, the value it brings to multichannel operations, and how sellers can use MCS to create more efficient fulfillment workflows. We’ll then bring the experience to life with a demonstration highlighting MCS in action, including connectivity through Sellercloud.
 
-**9:00 AM–10:00 AM — [Ecom] Training: Descartes Finale™ – Choose Your Own Adventure: Customizing Workflows** — Sky Harbor A
-Speaker: Mike Kroeger
+**9:00 AM–10:00 AM — [Ecom] Training: Descartes Finale™ – Choose Your Own Adventure: Customizing Workflows** — Sky Harbor A · [05]
+Speaker: Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Learn how to customize your Descartes Finale interface and workflows with conditional formatting, automation, and tags.
 
-**9:00 AM–10:00 AM — [Ecom] Training: Descartes Pacejet™ – Workflow Automation: Ship Faster, Spend Less, Touch Less** — McCarran B
-Speakers: Zachary Clark (Senior Account Manager); Ronald Lee (Vice President)
+**9:00 AM–10:00 AM — [Ecom] Training: Descartes Pacejet™ – Workflow Automation: Ship Faster, Spend Less, Touch Less** — McCarran B · [05]
+Speakers: Zachary Clark (Senior Account Manager, Descartes); Ronald Lee (Vice President, Descartes)
+> Every order asks the same questions: which carrier, which service, which fields, which paperwork. Answered by hand, hundreds of times a day, those questions cost time, money, and accuracy. Learn how to build automation rules that make those decisions once and apply them consistently — so your team touches fewer orders, and your shipping spend stops depending on who’s standing at the pack station.
 
-**10:00 AM — Morning Break** — Grand Ballroom [Foyer] · [06]
+**10:00 AM–10:15 AM — Morning Break** — Grand Ballroom [Foyer] · [06]
 *No description published.*
 
 **10:15 AM–11:15 AM — [Fleet] Training: Descartes Route Planner™ LNOS** · [01]
-Speakers: Matt Gruden; Danyal Basit (Solutions Architect)
+Speakers: Matt Gruden (Product Manager, Descartes); Danyal Basit (Solutions Architect, Descartes)
+> Get hands-on with the newest Descartes Route Planner LNOS capabilities, including AI and machine learning features such as predictive service duration and the Tess in-app knowledge assistant. We will also cover electric vehicle optimization, routing improvements in the GeoStop view, asynchronous routing, driver and truck calendars, new asset filtering logic, and quick publishing of all routes on the new dashboard technology.
 
-**10:15 AM–11:15 AM — [Fleet] Training: Descartes Route Planner™ On-demand**
-Speakers: Marco Sponza (Senior Product Manager); Warren Ostronoff (Senior Implementation Consultant)
+**10:15 AM–11:15 AM — [Fleet] Training: Descartes Route Planner™ On-demand** · [01]
+Speakers: Marco Sponza (Senior Product Manager, Descartes); Warren Ostronoff (Senior Implementation Consultant, Descartes)
+> Take a closer look at the day-to-day controls dispatchers rely on in Descartes Route Planner On-demand, including unscheduled shipments and how to split and swap shipments between routes. We will cover the controls that keep a plan stable — locking stops, dispatch restrictions, and customer-assigned shipment display — along with route and asset setup using start day offset and fixed routes, vehicle profiles, trailers, and assign by geocode. It also covers route exceptions and route replay.
 
-**10:15 AM–11:15 AM — [Fleet] Training: Descartes ShipTrack™**
-Speakers: Benoit Gregoire; Rachelle Solt
+**10:15 AM–11:15 AM — [Fleet] Training: Descartes ShipTrack™** · [01]
+Speakers: Benoit Gregoire (Senior Product Manager, Descartes); Rachelle Solt (Manager, Descartes)
+> Follow a practical daily workflow in Descartes ShipTrack, from address and geocoding validation through optimization in Descartes Area Planner and into the post-optimization adjustments dispatchers make in RouteIQ, rebalancing work with visual dispatch tools and resequencing routes before releasing the plan. The same workflow carries into warehouse operations with Scan Sort and Scan Load, the scan load dashboard, and configurable scan codes. It also covers messaging enhancements, including chat history, inbox management, and resolved and unresolved conversations.
 
 **10:15 AM–11:15 AM — [LSP] Roadmap: Descartes Next Generation TMS for Brokers and Forwarders** — Rosemont Ballroom B · [02]
-Speakers: Mike Finn; Brad Hockersmith (Sr. Director, Product Management)
+Speakers: Mike Finn (Product Manager, Descartes); Brad Hockersmith (Sr. Director, Product Management, Descartes)
+> Descartes TMS:next is a transportation management system (TMS) being built to redefine how brokers and freight forwarders manage and scale their operations. Designed as an artificial intelligence (AI) and agent-first solution with embedded application programming interfaces (APIs), it represents a significant investment in the future of forwarding technology. This session introduces the product vision, the architectural and workflow principles guiding its development, and how intelligent agents, connected data, and API-enabled services can help teams automate work, make faster decisions, and deliver a more responsive customer experience.
 
-**10:15 AM–11:15 AM — [LSP] Roadmap: Integrated Document Management** — Rosemont Ballroom A
-Speaker: Khwaja Arsalan
+**10:15 AM–11:15 AM — [LSP] Roadmap: Integrated Document Management** — Rosemont Ballroom A · [02]
+Speaker: Khwaja Arsalan (Product Manager, Descartes)
+> Documents remain one of the largest sources of manual effort, fragmented data, and operational delay across customs brokerage and freight forwarding. Descartes Integrated Document Management introduces an artificial intelligence (AI) agentic approach that can interpret documents, extract relevant information, and move that data into the workflows where it is needed. The session shows how the functionality is being designed to support use cases such as extracting commercial invoice data for customs entries and bill of lading information for forwarding operations. It also covers reducing repetitive data entry, improving accuracy, and turning unstructured documents into actionable logistics data.
 
 **10:15 AM–11:15 AM — [GTI] Trade Content in Practice: Leveraging FTAs in an Era of Tariff Volatility** · [03]
 Speakers: Chad Swance (Head of Global Trade, Syensqo); Francisco Romero Diaz (Global Manager, Trade Compliance, EFI); Jackson Wood (Director, Industry Solutions, Descartes)
 > As tariffs, regulations, and classification requirements change rapidly, reliable trade content is the foundation of sound compliance decisions. EFI and Syensqo will share how they use Descartes trade content to support FTA utilization, improve consistency across teams, and respond more efficiently. The session will focus on practical experience, business value, and lessons other organizations can apply.
 
 **10:15 AM–11:15 AM — [TM] Training: Descartes MyCarrierPortal™ – Carrier Vetting & Fraud Monitoring** — Rosemont Ballroom D · [04]
-Speakers: Samantha Smith (Technical Account Manager); Patrick Horner (Senior Solutions Consultant)
+Speakers: Samantha Smith (Technical Account Manager, Descartes); Patrick Horner (Senior Solutions Consultant, Descartes)
+> Participate in classroom-style training focused on vetting, onboarding, compliance, and reasonable care documentation to reduce overall risk.
 
-**10:15 AM–11:15 AM — [TM] Training: Descartes 3G TMS, Descartes Transportation Manager, and Descartes MacroPoint** — Rosemont Ballroom C
-Speakers: Petar Ivanov; Josh Walker (Director, Carrier Operations)
+**10:15 AM–11:15 AM — [TM] Training: Descartes 3G TMS, Descartes Transportation Manager, and Descartes MacroPoint** — Rosemont Ballroom C · [04]
+Speakers: Petar Ivanov (Technical Account Manager, Descartes); Josh Walker (Director, Carrier Operations, Descartes)
+> From Bottleneck to Growth Engine - Scaling Carrier Connectivity: Learn how shippers and managed transportation providers can streamline carrier connectivity across Descartes solutions including Descartes 3G TMS, Descartes Transportation Manager, and Descartes MacroPoint. Discover practical ways to reduce onboarding friction, execute faster, accelerate time to value, and scale carrier adoption.
 
 **10:15 AM–11:15 AM — [Ecom] Training: Descartes Finale™ – Accounting Best Practices and Data Integrity** — Sky Harbor A · [05]
-Speaker: Mike Kroeger
+Speaker: Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Learn how to run an account audit, ensure accurate cost of goods sold (COGS), understand profitability numbers, and maintain data integrity in your account.
 
-**10:15 AM–11:15 AM — [Ecom] Training: Descartes Pacejet™ – 10 Time-Saving Tips Every User Should Know** — McCarran B
-Speakers: Samuel Schwab (Manager, Professional Services); Zachary Clark (Senior Account Manager)
+**10:15 AM–11:15 AM — [Ecom] Training: Descartes Pacejet™ – 10 Time-Saving Tips Every User Should Know** — McCarran B · [05]
+Speakers: Samuel Schwab (Manager, Professional Services, Descartes); Zachary Clark (Senior Account Manager, Descartes)
+> Join us for a fast-paced countdown of 10 practical tips and tricks that can help your team ship faster, reduce manual effort, and get more value from Descartes Pacejet. Whether you’re a new user or a seasoned shipper, you’ll leave with ideas you can put into practice right away.
 
-**10:15 AM–11:15 AM — [Ecom] Training: Descartes Sellercloud™ – Mapping Tools, SMTP Profile Setup & Scheduled Tasks Automation** — McCarran A
-Speakers: Kristiyan Ivanov; Joanna Camardo
+**10:15 AM–11:15 AM — [Ecom] Training: Descartes Sellercloud™ – Mapping Tools, SMTP Profile Setup & Scheduled Tasks Automation** — McCarran A · [05]
+Speakers: Kristiyan Ivanov (Solutions Consultant, Descartes); Joanna Camardo (Solutions Consultant, Descartes); Kailey Siagkris (Operations Administrator, Descartes)
+> This session will walk through the benefits of Descartes Sellercloud mapping tools that we can use to integrate vendors, 3PLs, channels, etc. We will then turn this into a fully automated workflow using scheduled tasks and SMTP profiles.
 
 **11:15 AM–12:15 PM — [Fleet] Training: Descartes GreenMile™** · [01]
-Speakers: Luis Calcano; Laisa Rocha (Product Manager)
+Speakers: Luis Calcano (Manager, Professional Services, Descartes); Laisa Rocha (Product Manager, Descartes)
+> This session covers the Descartes GreenMile ecosystem and its core capabilities, including operational visibility and daily management — monitoring at route, stop, driver, and vehicle level, and how exceptions are raised and followed up. It also introduces CoDi and the operational use cases it supports, and covers the Driver+ application, including the driver workflow for route execution and the activities available at route, stop, and order level.
 
-**11:15 AM–12:15 PM — [Fleet] Training: Descartes Transportation Manager™**
-Speakers: Mauricio Ruiz (Director, Product Management); Mona McFadden (Senior Solutions Consultant)
+**11:15 AM–12:15 PM — [Fleet] Training: Descartes Transportation Manager™** · [01]
+Speakers: Mauricio Ruiz (Director, Product Management, Descartes); Mona McFadden (Senior Solutions Consultant, Descartes)
+> Go through the configuration behind loads, tendering, and invoicing in Descartes Transportation Manager, including trade lanes and interactive maps on the load and automatic tendering setup. We will cover the invoicing side in detail — creating invoices automatically on delivered status, tax recalculation, carrier notifications, underbilled prevention, and high-discrepancy invoice approval. It also covers how these workflows differ between an own fleet and third-party carriers.
 
-**11:15 AM–12:15 PM — [Fleet] Training: Descartes WinRoute™**
-Speakers: Chris Doiron; Elizabeth DiFazio
+**11:15 AM–12:15 PM — [Fleet] Training: Descartes WinRoute™** · [01]
+Speakers: Chris Doiron (Senior Solutions Consultant, Descartes); Elizabeth DiFazio (Solutions Consultant, Descartes)
+> Explore the newest planning capabilities in Descartes WinRoute, including fuzzy territories, dynamic frequency editing, and composite goals. We will also cover driver entropy, which balances driver hours across the planning horizon, and the new plain-English warnings in the planner.
 
 **11:15 AM–12:15 PM — [LSP] Roadmap: Descartes Global Price Management™** — Rosemont Ballroom A · [02]
-Speaker: Henning Voss (VP, Product Management)
+Speaker: Henning Voss (VP, Product Management, Descartes)
+> Speed, accuracy, and margin control have become essential to winning freight business in a volatile pricing environment. This session spans rate management, capacity and allocation capabilities, digital quoting, and closer integration with forwarding operations. Particular attention goes to direct carrier application programming interface (API) connections that bring current spot rates, schedules, surcharges, and routing options into a single quoting workflow. For forwarders, the work ahead is aimed at responding to opportunities in seconds, comparing market options, protecting margins, and reducing the labor required to maintain and search for rates.
 
-**11:15 AM–12:15 PM — [LSP] Roadmap: Descartes Global Security Filings™ & Air Solutions** — United A
-Speakers: Rob Pedersen (Senior Director, Product Management); Martin Meacock
+**11:15 AM–12:15 PM — [LSP] Roadmap: Descartes Global Security Filings™ & Air Solutions** — United A · [02]
+Speakers: Rob Pedersen (Senior Director, Product Management, Descartes); Martin Meacock (VP, Product Management, Descartes)
+> Recent work across the Descartes air solutions now has a common ground, which shares an interface so the products function as if they are in one environment. The filing programs have been rebuilt using current architecture standards, with new country programs included. Assistants using artificial intelligence help find air waybills, diagnose errors and fill documents using plain English.
+>
+> Looking ahead, we'll have a single view of every declaration on a conveyance, signals on which filings are likely to be held before they are sent, wider partnerships across the air cargo community, and a booking portal for smaller forwarders.
+>
+> Retiring the last legacy stacks opens the door to agents working across every application, on a customer's own records, inside their guardrails, with humans making the calls.
 
-**11:15 AM–12:15 PM — [LSP] Roadmap: Descartes QuestaWeb™ and Foreign Trade Zones** — Rosemont Ballroom B
-Speaker: Christopher Springer (Sr. Director, Product Management)
+**11:15 AM–12:15 PM — [LSP] Roadmap: Descartes QuestaWeb™ and Foreign Trade Zones** — Rosemont Ballroom B · [02]
+Speaker: Christopher Springer (Sr. Director, Product Management, Descartes)
+> Organizations are turning to Foreign Trade Zone (FTZ) programs to reduce tariff exposure, improve cash flow, and strengthen control over their import operations. This session covers investments in Descartes QuestaWeb FTZ designed to simplify inventory management, automate customs filings, improve audit readiness, and provide greater visibility across single- and multi-site FTZ operations. It also addresses how Descartes is advancing the solution to help customers maximize opportunities for duty deferral, reduction, or elimination while managing the operational and regulatory complexity that accompanies an FTZ program.
 
 **11:15 AM–12:15 PM — [GTI] Import and Export Compliance: Solving Real Compliance Challenges** · [03]
 Speakers: Wendy Thibodeaux (Vice President, International Trade Compliance, GKN Aerospace); Robyn Jones (Trade Compliance Manager, Twenty-Six Defense); Jackson Wood (Director, Industry Solutions, Descartes)
 > Import and export compliance rest on the same requirement: turning rules that keep changing into processes a team can apply consistently. This session covers both directions. On the import side, Descartes solutions support classification, documentation, visibility, and audit readiness, with customers sharing what changed as imports were managed more efficiently. On the export side, the ground is classification, licensing, screening, and documentation under complex export controls. The practical questions are the same in both cases: how the decisions get made, and what makes a compliance workflow efficient and defensible.
 
 **11:15 AM–12:15 PM — [TM] Training: Descartes MacroPoint™ for Freight Brokers & 3PLs – New Features** — Rosemont Ballroom D · [04]
-Speakers: Ashley Redford (Manager, Technical Account Management); Brad Wimer (Implementation Manager)
+Speakers: Ashley Redford (Manager, Technical Account Management, Descartes); Brad Wimer (Implementation Manager, Descartes)
+> Participate in classroom-style training for brokers and 3PLs focused on the latest in freight tracking. Receive hands-on training on new features and ask specific questions about tracking capabilities across our integrated solutions.
 
-**11:15 AM–12:15 PM — [TM] Training: Descartes MacroPoint™ for Shippers – New Features** — Rosemont Ballroom C
-Speakers: Josh Walker (Director, Carrier Operations); April Sutter (Technical Account Manager)
+**11:15 AM–12:15 PM — [TM] Training: Descartes MacroPoint™ for Shippers – New Features** — Rosemont Ballroom C · [04]
+Speakers: Josh Walker (Director, Carrier Operations, Descartes); April Sutter (Technical Account Manager, Descartes)
+> Participate in classroom-style training for shippers focused on the latest in freight tracking. Receive hands-on training on new features and ask specific questions about tracking capabilities across our integrated solutions.
 
 **11:15 AM–12:15 PM — [Ecom] Training: Descartes Finale™ – Leveraging Your Data, Reports, and AI to Measure What Matters** — Sky Harbor A · [05]
-Speaker: Mike Kroeger (Senior Solutions Consultant)
+Speaker: Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Gain a better understanding of Descartes Finale's powerful report engine to make your inventory data work for you and your business. Learn how to export Descartes Finale data, analyze it with AI, and build customized reports, documents, and labels.
 
-**11:15 AM–12:15 PM — [Ecom] Training: Descartes Pacejet™ – No Click Ship: An Overview of Barcode-Driven Shipping** — McCarran B
-Speaker: Samuel Schwab (Manager, Professional Services)
+**11:15 AM–12:15 PM — [Ecom] Training: Descartes Pacejet™ – No Click Ship: An Overview of Barcode-Driven Shipping** — McCarran B · [05]
+Speaker: Samuel Schwab (Manager, Professional Services, Descartes)
+> Discover barcode-driven shipping to automate warehouse processes, reduce errors, and speed fulfillment through scanning-based workflows, and how to create your own barcode shortcuts.
 
-**11:15 AM–12:15 PM — [Ecom] Training: Descartes Sellercloud™ – "Just Kitting Around" and "Measure What Matters"** — McCarran A
-Speakers: Ben Rees; Gary Basko (Senior Account Executive)
+**11:15 AM–12:15 PM — [Ecom] Training: Descartes Sellercloud™ – "Just Kitting Around" and "Measure What Matters"** — McCarran A · [05]
+Speakers: Ben Rees (Senior Solutions Consultant, Descartes); Gary Basko (Senior Account Executive, Descartes); Akash Patel (President, One Tree Brands)
+*No description published (site shows “Description coming soon.”).*
 
 **12:15 PM–1:15 PM — Conference Lunch** — Grand Ballroom DEFGH · [06]
 *No description published.*
-
 **1:15 PM–2:15 PM — [Fleet] From Video to Action: Using Camera Insights to Strengthen Safety Training** — Grand Ballroom C · [01]
 Speaker: Diego Pascoalino (Team Lead, Training Services, Geotab)
 > Video can do more than document what happened. When combined with telematics and safety data, camera insights can help organizations identify risky driving patterns, understand the factors behind incidents, and turn real-world events into more focused coaching opportunities. This session explores how camera technology supports a proactive approach to safety training. Learn how safety teams can use video evidence, contextual fleet data, and targeted coaching to reinforce positive driving behaviors, address risk earlier, and build a stronger culture of continuous improvement. The session will also highlight concrete ways to connect camera insights with existing safety programs and driver-training workflows.
@@ -411,3 +470,7 @@ Speakers: Jonathan Bikowski (Director, Customer Experience, Descartes); Kieran W
 
 **12:15 PM–1:15 PM — Conference Lunch** — Grand Ballroom DEFGH · [06]
 *No description published.*
+
+---
+
+**Related:** [Event overview](README.md) · [Research notes](research-notes.md) · [Geotab session plan](geotab-mcp-session.md)
