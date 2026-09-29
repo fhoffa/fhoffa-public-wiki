@@ -6,7 +6,7 @@
 **Dates:** October 6–8, 2026, 8:00 AM–6:00 PM CT (early check-in Monday, October 5)
 **Venue:** Hyatt Regency O'Hare Chicago, 9300 Bryn Mawr, Rosemont, IL 60018
 **Registration:** $900 (team special: register 3, 4th free)
-**Sessions:** 112 total — Mon 10/5: 1 · Tue 10/6: 47 · Wed 10/7: 50 · Thu 10/8: 14
+**Sessions:** 149 total — Mon 10/5: 1 · Tue 10/6: 47 · Wed 10/7: 87 · Thu 10/8: 14
 
 ## Tracks
 - [01] Fleet Performance Management [RMT]
@@ -18,7 +18,7 @@
 - Featured (keynote, tech fair)
 
 ## About this data
-- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions verified on site; verbatim descriptions captured for every session except two with no published description. **Wednesday 10/7:** 50 sessions on the live tab; morning 35 fully verified Sep 29, 2026 with verbatim descriptions (7 Fleet trainings show no room on site); afternoon/evening extraction in progress. **Thursday 10/8:** 14 sessions; fully verified Sep 29, 2026 — times, rooms, speakers, verbatim descriptions.
+- Captured in passes on Sep 29, 2026. A same-day verification pass confirmed the agenda restructure across all four day tabs: pre-restructure product-roadmap session lists are void. **Tuesday 10/6:** all 47 sessions verified on site; verbatim descriptions captured for every session except two with no published description. **Wednesday 10/7:** all 87 sessions fully verified Sep 29, 2026 — times, rooms, speakers, and verbatim descriptions for every session except four Fleet roadmap sessions whose detail dialogs show “Description coming soon.” (afternoon/evening: 52 entries from 1:15 PM onward, including the 3:15 PM Afternoon Break). **Thursday 10/8:** 14 sessions; fully verified Sep 29, 2026 — times, rooms, speakers, verbatim descriptions.
 - Speaker lists for sessions without opened detail dialogs come from the agenda list view and may be incomplete — in several cases the detail dialog revealed additional speakers beyond the list view.
 - Two session titles were truncated in the list view (marked …).
 - Some times, rooms, and titles differ between the two passes (the agenda appears to have been updated between passes); conflicts are noted inline. Where the passes disagree on track labels, the first pass (read from the site's track pills) is kept.
@@ -221,7 +221,7 @@ Speaker: Kohl Perkins (Group Director, Global Partnerships)
 
 ---
 
-## Wednesday, October 7, 2026 (50 sessions on live tab — morning fully verified Sep 29, 2026; afternoon extraction pending)
+## Wednesday, October 7, 2026 (87 sessions — fully verified Sep 29, 2026)
 
 **7:45 AM–5:30 PM — Registration Desk** — Grand Ballroom [Foyer] · [06]
 *No description published.*
@@ -367,54 +367,208 @@ Speakers: Ben Rees (Senior Solutions Consultant, Descartes); Gary Basko (Senior 
 Speaker: Diego Pascoalino (Team Lead, Training Services, Geotab)
 > Video can do more than document what happened. When combined with telematics and safety data, camera insights can help organizations identify risky driving patterns, understand the factors behind incidents, and turn real-world events into more focused coaching opportunities. This session explores how camera technology supports a proactive approach to safety training. Learn how safety teams can use video evidence, contextual fleet data, and targeted coaching to reinforce positive driving behaviors, address risk earlier, and build a stronger culture of continuous improvement. The session will also highlight concrete ways to connect camera insights with existing safety programs and driver-training workflows.
 
-**1:15 PM–2:15 PM — [Fleet] Training: Descartes Area Planner™**
-Speakers: Walid Bakkar (Technical Account Manager); Luke Maxon (Principal Software Developer)
+**1:15 PM–2:15 PM — [Fleet] Training: Descartes Area Planner™** · [01]
+Speakers: Walid Bakkar (Technical Account Manager, Descartes); Luke Maxon (Principal Software Developer, Descartes)
+> Get up to speed on the refreshed Descartes Area Planner interface and menus, and learn when and why to use Fixed, Hybrid, and Open routing for different operational requirements. We will also cover optimizer cost tuning and how Descartes Area Planner capabilities can drive daily planning within Descartes ShipTrack, connecting strategic route planning to day-to-day execution.
 
-**1:15 PM–2:15 PM — [Fleet] Training: Descartes Customer Engagement™**
-Speakers: Kieran Wilson (Senior Product Manager); Kim Bruno
+**1:15 PM–2:15 PM — [Fleet] Training: Descartes Customer Engagement™** · [01]
+Speakers: Kieran Wilson (Senior Product Manager, Descartes); Kim Bruno (Product Manager, Descartes)
+> Work through this year's major updates to the Descartes Customer Engagement dashboard, including route and stop detail, proof of delivery, route tracking, and notification and chat history. We will also cover Chat My Way, how to view, tag and audit customer feedback, and AI Proof of Delivery (beta), plus how the Self-Serve Demo app can be used for internal training and exploring new functionality.
 
-**1:15 PM–2:15 PM — [Fleet] Training: Descartes Fleet Safety™**
-Speaker: Jonathan Bikowski (Director, Customer Experience)
+**1:15 PM–2:15 PM — [Fleet] Training: Descartes Fleet Safety™** · [01]
+Speaker: Jonathan Bikowski (Director, Customer Experience, Descartes)
+> Trace the full behavior-change loop across three connected areas of Descartes Fleet Safety — identify, coach, and correct. We will cover how to read and use the Watch List to spot driver risk before it escalates, how administrators turn identified risk into targeted coaching assignments using the built-in learning management system (LMS), and how Event Management supports corrective action on individual behaviors early, before they build into a recurring trend on the Watch List.
 
 **1:15 PM–2:15 PM — [LSP] Internet of Things (IoT) Overview and Market Trends** — Midway · [02]
-Speaker: Simon Gutschlag (VP, Product Management)
+Speaker: Simon Gutschlag (VP, Product Management, Descartes)
 > This session outlines the Internet of Things landscape, market trends, adoption drivers, and potential applications across logistics and supply chain operations.
 
-**1:15 PM–2:15 PM — [LSP] Roadmap: Descartes Canadian Customs Brokerage™** — Rosemont Ballroom A
-Speaker: Tomasz Jasniewicz
+**1:15 PM–2:15 PM — [LSP] Roadmap: Descartes Canadian Customs Brokerage™** — Rosemont Ballroom A · [02]
+Speaker: Tomasz Jasniewicz (Senior Product Manager, Descartes)
+> Canadian customs brokers and importers continue to navigate changing Canada Border Services Agency (CBSA) requirements, CBSA Assessment and Revenue Management (CARM) processes, growing data demands, and the need for more efficient digital workflows. The session takes in the Descartes Canadian Customs Brokerage and visual importer product families: modern user experiences, customs declaration and regulatory workflows, accounting and revenue management, document handling, customer visibility, and electronic connectivity with CBSA and participating government agencies. The aim is greater productivity, stronger compliance, and support for the long-term needs of Canadian brokerage operations.
 
-**1:15 PM–2:15 PM — [LSP] Roadmap: US Customs House Brokers** — Rosemont Ballroom B
-Speakers: Fany Flores-Pastor (Senior Director); Sandra Rea (Director, Customer Support)
+**1:15 PM–2:15 PM — [LSP] Roadmap: US Customs House Brokers** — Rosemont Ballroom B · [02]
+Speakers: Fany Flores-Pastor (Senior Director, Descartes); Sandra Rea (Director, Customer Support, Descartes); Greg Butler (Product Manager, Descartes)
+> The U.S. customs environment is changing rapidly, placing greater pressure on brokers to process rising volumes, adapt to new filing requirements, and maintain accuracy without adding operational complexity. This session sets out where the investment is going in Descartes NetCHB™ and Descartes OneView™. Both are evolving to support scalable customs filing, high-volume ecommerce processing, Automated Commercial Environment (ACE) and Partner Government Agency submissions, exception management, accounting, and more connected workflows across brokerage and forwarding operations.
 
 **1:15 PM–2:15 PM — [GTI] Training: Descartes CustomsInfo™ Reference** · [03]
 *No speakers listed.*
+> Explore the latest enhancements in Descartes CustomsInfo Reference, including expanded visibility into U.S. additional duties, improved landed cost analysis and comparison tools, and new duty impact and change reporting. Learn how to classify products, evaluate duty exposure, compare sourcing scenarios, and assess ADD/CVD and product compliance risk using the new modules.
 
-**1:15 PM–2:15 PM — [GTI] Training: Descartes Visual Compliance™ – Advanced Search Tuning**
+**1:15 PM–2:15 PM — [GTI] Training: Descartes Visual Compliance™ - Advanced Search Tuning** · [03]
 *No speakers listed.*
+> Learn how to improve screening accuracy, reduce false positives, and streamline compliance workflows in Descartes Visual Compliance. Through practical screening scenarios, we will cover how to optimize search settings, run more effective screening reviews, and use the latest AI Assist capabilities to accelerate first-level analysis of screening results.
 
 **1:15 PM–2:15 PM — [TM] Training: Descartes MacroPoint™ Carrier Onboarding, Compliance & Communication** — Rosemont Ballroom D · [04]
-Speakers: Ashley Redford; Josh Walker (Director, Carrier Operations)
+Speakers: Ashley Redford (Manager, Technical Account Management, Descartes); Josh Walker (Director, Carrier Operations, Descartes)
+> Participate in classroom-style training on the latest strategies and best practices for onboarding carriers, keeping them compliant, and communicating with drivers in your freight visibility network.
 
-**1:15 PM–2:15 PM — [TM] Training: Descartes Transportation Manager™ for Shippers** — Rosemont Ballroom C
-Speakers: Dave Swanson (Director, Solutions Consulting); Mauricio Ruiz (Director, Product Management)
+**1:15 PM–2:15 PM — [TM] Training: Descartes Transportation Manager™ for Shippers** — Rosemont Ballroom C · [04]
+Speakers: Dave Swanson (Director, Solutions Consulting, Descartes); Mauricio Ruiz (Director, Product Management, Descartes); Mona McFadden (Senior Solutions Consultant, Descartes)
+> Participate in classroom-style training for Descartes Transportation Manager™ TMS focused on optimizing workflows across the order lifecycle. We’ll provide hands-on training on current capabilities and answer specific questions about workflows across our integrated solutions.
 
 **1:15 PM–2:15 PM — [Ecom] Roadmap: Descartes Finale™** — Sky Harbor A · [05]
-Speakers: Alex Sampera (VP, Product Management); MJ Liao (Senior Director)
+Speakers: Alex Sampera (VP, Product Management, Descartes); MJ Liao (Senior Director, Descartes); Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Get exclusive access to a surprise feature, then immediately test it with a hands-on demo. Be the first to see our Product Roadmap and provide real-time feedback on what we're building for you. This interactive session gives you insider access to influence our product team.
 
-**1:15 PM–2:15 PM — [Ecom] Ship with Walmart: Smarter, Faster, Lower-Cost Shipping** — McCarran A
+**1:15 PM–2:15 PM — [Ecom] Ship with Walmart: Smarter, Faster, Lower-Cost Shipping** — McCarran A · [05]
 Speaker: Michael Klagge (Senior Manager, Technology Operations, Walmart Marketplace)
 > Learn how Ship with Walmart helps you save with Walmart-negotiated shipping rates, protect every shipment with built-in protections, and fulfill orders faster—all directly from Descartes Sellercloud.
 
-**1:15 PM–2:15 PM — [Ecom] Training: Descartes Pacejet™ – Your Rates, Your Way: How to Optimize Rates for Your Business** — McCarran B
-Speaker: Samuel Schwab (Manager, Professional Services)
+**1:15 PM–2:15 PM — [Ecom] Training: Descartes Pacejet™ - Your Rates, Your Way: How to Optimize Rates for Your Business** — McCarran B · [05]
+Speaker: Samuel Schwab (Manager, Professional Services, Descartes)
+> Learn how to take control of your shipping strategy with Descartes Pacejet. This session will demonstrate how to leverage automated business rules, freight markup tools, and transit time restrictions to optimize carrier selection, balance cost versus service, and ensure your rates work the way your business needs them to.
 
 **2:15 PM–3:15 PM — [Fleet] Roadmap: Descartes Route Planner™ LNOS** · [01]
-Speaker: Matt Gruden (Product Manager)
+Speaker: Matt Gruden (Product Manager, Descartes)
+> Artificial intelligence (AI) and machine learning moved into everyday planning in Descartes Route Planner LNOS over the past year. This session picks up from there, covering how that work now reaches customers: an Available Features screen that lets an organization turn on and test new functionality on its own timeline, new application programming interfaces (APIs) for driver and truck calendar management, and a shorter release cycle with a published schedule and release notes. Further out, the session covers a modernized front end, richer true cost profiles, trailer assignment on trips, and René, an embedded agent that carries out work in connected applications rather than only answering questions.
+
+**2:15 PM–3:15 PM — [Fleet] Roadmap: Descartes Route Planner™ On-demand** · [01]
+Speaker: Marco Sponza (Senior Product Manager, Descartes)
+> Join the product team for a look at what shipped across the past year and where Descartes Route Planner On-demand is heading next. We'll walk through the highlights of the last five releases — a modernized user experience, enhanced planning and scheduling, stronger route governance, and smarter operational insights — including new optimization goals and default profiles, Planning Performance Assessment with side-by-side plan comparison, machine-learning (ML) predicted service durations, drag-and-drop scheduling, and simplified exception tracking. We'll then turn to the roadmap: a unified intelligence platform for analytics, artificial intelligence (AI) and ML; role-based dashboards and predictive insights; stronger exception management and alerting; richer data and reporting; and improved workflows.
+
+**2:15 PM–3:15 PM — [Fleet] Roadmap: Descartes WinRoute™** · [01]
+Speakers: Sergio Torres (SVP, Product Management, Descartes); Chris Doiron (Senior Solutions Consultant, Descartes)
+> Strategic route optimization and daily execution have long lived in separate solutions. This session covers the work to close that loop between planning in Descartes WinRoute and execution in Descartes Route Planner™, with Descartes Fleet Data Intelligence as the shared source of truth underneath both. It also covers new interfaces that let an artificial intelligence (AI) assistant query route data, run optimization and build routes directly. The roadmap covers the product initiatives alongside the data foundation they depend on: fleet data enablement and automated ingestion of route data into that foundation, a master route repository, and a single knowledge agent spanning both products, working toward closed-loop route optimization.
+
+**2:15 PM–3:15 PM — [LSP] IoT: Market Outlook** — Midway · [02]
+Speaker: Simon Gutschlag (VP, Product Management, Descartes)
+> This session looks at Internet of Things (IoT) market trends and the drivers behind adoption across logistics and supply chain operations.
+
+**2:15 PM–3:15 PM — [LSP] Training: Descartes Canadian Customs Brokerage™** — Rosemont Ballroom A · [02]
+Speakers: Tomasz Jasniewicz (Senior Product Manager, Descartes); Glenn Palanacki (VP of Product Management, Descartes)
+> This instructor-led session builds working knowledge of Canadian brokerage processes, compliance requirements, and effective workflows.
+
+**2:15 PM–3:15 PM — [LSP] Training: Descartes OneView™** — Rosemont Ballroom B · [02]
+Speakers: Sean Huffman (Director, Customer Support, Descartes); Jeff Eckstein (Implementation Manager, Descartes)
+> This session reviews the latest enhancements across exception management, billing and invoicing, tariff and duty automation, and dashboard visibility, along with new artificial intelligence (AI) features supporting compliance review — aimed at brokerage operations and customer service teams working at high volume.
+
+**2:15 PM–3:15 PM — [GTI] Training: Descartes Free Trade Intelligence** · [03]
+*No speakers listed.*
+> Discover how Descartes Free Trade Intelligence accelerates free trade agreement qualification and opportunity identification. Learn how to evaluate product eligibility, identify and prioritize savings opportunities, validate qualification results, and maintain the supporting documentation that keeps trade decisions audit ready.
+
+**2:15 PM–3:15 PM — [GTI] Training: Descartes OCR Global EASE™ - Automating Export & Import Global Classification** · [03]
+*No speakers listed.*
+> Learn how Descartes OCR automation can streamline classification, reduce repetitive manual effort, and improve consistency across global classification activities. We will cover configuring automatic classification rules, using product attributes and flex fields to drive classification outcomes, reusing existing decisions across multiple countries, and applying automation through product and classification request workflows.
+
+**2:15 PM–3:15 PM — [TM] Roadmap: Descartes MyCarrierPortal™** — Rosemont Ballroom D · [04]
+Speaker: Tom Cornett (Sr. Director, Product Management, Descartes)
+> As fraud continues to evolve and negligent carrier hiring risk grows, hear how transportation teams are strengthening carrier vetting and compliance monitoring to protect freight and reduce risk without slowing down service.
+
+**2:15 PM–3:15 PM — [TM] Roadmap: Descartes Transportation Manager™** — Rosemont Ballroom C · [04]
+Speakers: Mauricio Ruiz (Director, Product Management, Descartes); Henry Yip (Director, Product Management, Descartes)
+> Join us for an in-depth discussion of the latest improvements and future product roadmap for Descartes Transportation Manager™ TMS, Descartes Dock Appointment Scheduling™, and Descartes Yard Management™.
+
+**2:15 PM–3:15 PM — [Ecom] Roadmap: Descartes Pacejet™** — McCarran B · [05]
+Speakers: Alex Sampera (VP, Product Management, Descartes); Ronald Lee (Vice President, Descartes)
+> Get exclusive access to a surprise feature, then immediately test it with a hands-on demo. Be the first to see our Product Roadmap and provide real-time feedback on what we're building for you. This interactive session gives you insider access to influence our product team.
+
+**2:15 PM–3:15 PM — [Ecom] Training: Descartes Finale™ - Build It, Sell It, Label It, Ship It: New In-App Shipping Workflows** — Sky Harbor A · [05]
+Speaker: Mike Kroeger (Senior Solutions Consultant, Descartes)
+> In this exclusive demo of the new integrated shipping feature in Descartes Finale, you will learn how to streamline your tech stack and shipping workflows today! In this exclusive demo of the new integrated shipping feature in Descartes Finale, you will learn how to streamline your tech stack and shipping workflows today! Mike Kroeger Senior Solutions Consultant Descartes
+
+**2:15 PM–3:15 PM — [Ecom] Training: Descartes Sellercloud™ - Word2PDF for Purchasing and Order Invoices** — McCarran A · [05]
+Speaker: Kristiyan Ivanov (Solutions Consultant, Descartes)
+> Learn how to create your own custom invoice design for orders and purchase order (PO) invoices. We will live-build a template from scratch using custom fields to meet your invoicing needs and requirements.
+
+**3:15 PM–3:30 PM — Afternoon Break** — Grand Ballroom [Foyer] · [06]
+*No description published.*
+
+**3:30 PM–4:30 PM — [Fleet] Roadmap: Descartes Customer Engagement™** · [01]
+Speaker: Kieran Wilson (Senior Product Manager, Descartes)
+> Last-mile communication has mostly run one way: the customer is told what is happening. This session covers the shift to acting on what comes back. Recipients reply to delivery messages in volume and get nothing back; the direction is to answer them from live delivery data using artificial intelligence (AI), escalating to a person when needed. A redesigned live tracking portal adds new security and privacy controls. The session also covers proof of delivery, where images are assessed for quality at capture and that assessment shows where quality is breaking down by location and driver. It introduces Driver Engagement too, a new direction giving drivers and their managers a shared view of performance on what drivers control and feeding what they learn on the road back into operations.
+
+**3:30 PM–4:30 PM — [Fleet] Roadmap: Descartes GreenMile™** · [01]
+Speaker: Laisa Rocha
+*No description published (site shows “Description coming soon.”).*
+
+**3:30 PM–4:30 PM — [Fleet] Roadmap: Descartes Area Planner™ and Descartes ShipTrack™** · [01]
+Speaker: Andy Dunn
+*No description published (site shows “Description coming soon.”).*
+
+**3:30 PM–4:30 PM — [LSP] IoT: Descartes RFID™ Case Study 1** — Midway · [02]
+Speaker: Simon Gutschlag (VP, Product Management, Descartes)
+> This case study shows how Descartes RFID is applied in a real-world Internet of Things (IoT) use case, with lessons on implementation, operational visibility, outcomes, and adoption considerations.
+
+**3:30 PM–4:30 PM — [LSP] Training: Descartes NetCHB™** — Rosemont Ballroom A · [02]
+Speakers: Sandra Rea (Director, Customer Support, Descartes); Fany Flores-Pastor (Senior Director, Descartes)
+> This session reviews the latest enhancements across entry upload, data import, agency eFiling, and document management, with several aimed at high-volume operations where reducing manual steps in bulk processing matters most.
+
+**3:30 PM–4:30 PM — [LSP] Training: Descartes QuestaWeb™** — Rosemont Ballroom B · [02]
+Speakers: Christopher Springer (Sr. Director, Product Management, Descartes); Eric Dalby (VP, Support, Descartes)
+> This session reviews the latest enhancements across tariff handling and bulk updates, document-to-data conversion, inventory and entry visibility, and bulk agency filing — aimed at foreign trade zone administrators and customs clearance teams, where accuracy at high volume drives both compliance and duty savings.
+
+**3:30 PM–4:30 PM — [GTI] Roadmap: Descartes OCR Global EASE™️** · [03]
+*No speakers listed.*
+> This session covers what is new in the solution and how recent changes in export controls, licensing and trade policy are shaping what comes next. The roadmap spans exports, customs filing, licensing and classification, along with imports and duty drawback, including planned integration with Descartes Free Trade Intelligence™ for free trade agreement qualification and supplier solicitation. It also covers where artificial intelligence (AI) is headed on the platform, helping compliance teams work faster and more accurately while users stay in control of every decision. For organizations managing controlled and defense-related data, the session outlines security and compliance initiatives, including work toward Federal Risk and Authorization Management Program (FedRAMP) readiness.
+
+**3:30 PM–4:30 PM — [GTI] Roadmap: Descartes Visual Compliance™️** · [03]
+*No speakers listed.*
+> This session walks through recent adjudication improvements, including checking addresses against matches on a map, filtering by country, and opening an alert on its own focus page. The session also addresses user management, giving organizations visibility into who has access, the ability to manage that access directly, and control over which of their people are authorized to do so. On artificial intelligence (AI), it outlines the approach the solution takes in compliance work: compliance first, opt in, and off by default, along with AI-assisted adjudication entering beta across watch list screening and Descartes Visual Compliance. It also examines where agent-based compliance is heading, with screening that an organization’s own applications can call, decisions recorded back, and the platform remaining the record of what was done.
+
+**3:30 PM–4:30 PM — [TM] Roadmap: Descartes MacroPoint™ for Freight Brokers & 3PLs** — Rosemont Ballroom D · [04]
+Speaker: Bob Derin (Director, Product Management, Descartes)
+> Join us for a deeper dive into recent solution enhancements and a preview of the future product roadmap for Descartes MacroPoint™, with a particular focus on logistics service providers (LSPs).
+
+**3:30 PM–4:30 PM — [TM] Roadmap: Descartes MacroPoint™ for Shippers** — Rosemont Ballroom C · [04]
+Speaker: Jeff Nastoff (Product Manager, Descartes)
+> Join us for an in-depth exploration of the latest enhancements for Descartes MacroPoint™ and a preview of the future product roadmap, with a particular focus on shippers.
+
+**3:30 PM–4:30 PM — [Ecom] Roadmap: Descartes Sellercloud™** — McCarran A · [05]
+Speakers: Phani Bushan (Director, Software Development, Descartes); MJ Liao (Senior Director, Descartes); Alex Sampera (VP, Product Management, Descartes)
+> Get exclusive access to a surprise feature, then immediately test it with a hands-on demo. Be the first to see our Product Roadmap and provide real-time feedback on what we're building for you. This interactive session gives you insider access to influence our product team.
+
+**3:30 PM–4:30 PM — [Ecom] Training: Descartes Finale™ - Barcode and Ship Like A Pro** — Sky Harbor A · [05]
+Speaker: Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Tired of mispicks and reships? In this training session, learn how to leverage the Finale Barcode feature suite to increase fulfillment accuracy and decrease warehousing headaches.
+
+**3:30 PM–4:30 PM — [Ecom] Training: Descartes Pacejet™ - "AI-Built Shipping KPIs" & "Retailer Paperwork: Your Format, Any Carrier, No Chargebacks"** — McCarran B · [05]
+Speakers: Samuel Schwab (Manager, Professional Services, Descartes); Zachary Clark (Senior Account Manager, Descartes); Ronald Lee (Vice President, Descartes)
+> Leverage AI and plain-language prompts to turn your data into a decision-ready KPI scorecard. Then, every retailer has its own rules for labels and packing slips, and getting them wrong means costly chargebacks. Learn how to build, edit, and manage compliant documents yourself with Descartes Pacejet’s Self-Service Editor — no support tickets or custom development required.
+
+**4:30 PM–5:30 PM — [Fleet] Roadmap: Descartes Driver Safety™** · [01]
+Speaker: Jonathan Bikowski (Director, Customer Experience, Descartes)
+*No description published (site shows “Description coming soon.”).*
+
+**4:30 PM–5:30 PM — [Fleet] Roadmap: Descartes Mobile™ and Descartes wGLN™** · [01]
+Speakers: Matt Howard (Product Manager, Descartes); Jennifer Walsh
+*No description published (site shows “Description coming soon.”).*
+
+**4:30 PM–5:30 PM — [Fleet] Roadmap: Descartes Fleet Data Intelligence** · [01]
+Speakers: Kim Bruno (Product Manager, Descartes); Henrique Miranda (Director, Product Management, Descartes)
+> Explore how Descartes Fleet Data Intelligence™ is using AI and machine learning to help fleets improve execution where it matters most: in daily operations. Built on the real-world operational data of the Global Logistics Network™ (GLN), the platform introduces René, an AI agent designed to simplify fleet performance analysis by surfacing real-time insights and longer-term improvement opportunities without the need for manual reporting or advanced analytics expertise. This session will show how planners, dispatchers and operations leaders can use conversational AI to quickly investigate issues, understand the drivers behind overtime or service risk, and uncover systemic inefficiencies hidden within fleet execution data. Attendees will also learn how embedded machine learning helps improve route density, increase planning precision and enable more stops per driver without adding vehicles or headcount. In addition, the session will highlight how structured performance visibility supports continuous improvement by helping organizations benchmark service levels, measure operational gains over time and scale best practices across the business. Ideal for organizations operating private or dedicated distribution networks, this session will demonstrate how trusted execution data and AI can work together to improve on-time delivery, strengthen service compliance and reduce cost per delivery.
 
 **4:30 PM–5:30 PM — [Fleet] Connecting AI to Action: Exploring Geotab AI Insights and MCP** — United A · [01]
 Speakers: Felipe Hoffa (Principal Data & AI Intelligence Advocate, Geotab); Adam Rocque (Manager, Insights & Integrations Consultancy, Geotab)
 > Fleet data often lives across multiple applications and operational tools, making it difficult to build a complete picture of what is happening across the business. This session explores how Geotab AI can help connect existing fleet technology and data resources to create a more unified source of truth. See how a common set of protocols can give artificial intelligence (AI) tools consistent access to relevant information across the fleet technology stack. The session will demonstrate how combining data from telematics, safety, maintenance, operations, and other business software can help teams reduce information silos, ask better questions, and turn insights into action. Learn how Geotab AI can help organizations work from a connected operational view while preserving the governance and context needed to make confident decisions.
 
+**4:30 PM–5:30 PM — [LSP] Descartes Canadian Customs Brokerage™ Steering Committee** — Rosemont Ballroom A · [02]
+Speaker: Glenn Palanacki (VP of Product Management, Descartes)
+> A steering committee session focused on Descartes Canadian Customs Brokerage priorities, progress, key decisions, stakeholder alignment, and next steps.
+
+**4:30 PM–5:30 PM — [LSP] Descartes OneView™ Steering Committee** — Rosemont Ballroom B · [02]
+Speakers: George Manolis (VP, Product Management, Descartes); Sean Huffman (Director, Customer Support, Descartes); Greg Butler (Product Manager, Descartes)
+> A steering committee session focused on Descartes OneView priorities, product progress, user feedback, key decisions, and upcoming actions.
+
+**4:30 PM–5:30 PM — [LSP] IoT: Descartes RFID™ Case Study 2** — Midway · [02]
+Speaker: Simon Gutschlag (VP, Product Management, Descartes)
+> This case study shows how Descartes RFID is applied in a real-world Internet of Things (IoT) use case, with lessons on implementation, operational visibility, outcomes, and adoption considerations.
+
+**4:30 PM–5:30 PM — [GTI] Roadmap: Global Trade Content** · [03]
+*No speakers listed.*
+> This session looks at the denied party screening content recently added to the suite and the regulatory changes expected ahead. It examines emerging screening requirements, including those arising from Russia sanctions and the U.S. Department of Energy's bulk power supply chain initiative. It also covers plans to broaden coverage through future partner content.
+
+**4:30 PM–5:30 PM — [TM] Roadmap: Descartes Aljex™ for LSPs** — Rosemont Ballroom D · [04]
+Speaker: Jesse Carmichael (Senior Product Manager, Descartes)
+> Join us for a deeper dive into recent transportation management enhancements and the future product roadmap for Descartes Aljex™.
+
+**4:30 PM–5:30 PM — [TM] Roadmap: Descartes 3G TMS™** — Rosemont Ballroom C · [04]
+Speaker: Jayne Marchesan (Director, Product Management, Descartes)
+> Join us for a deeper dive into the latest enhancements and future product roadmap for Descartes 3G TMS™.
+
+**4:30 PM–5:30 PM — [Ecom] Warehouse Layout and Workflow Best Practices** · [05]
+Speakers: Ben Rees (Senior Solutions Consultant, Descartes); Gary Basko (Senior Account Executive, Descartes); Abe Harari (Director of Sales and Operations, Capital Audio Electronics); Ronald Lee (Vice President, Descartes); Mike Kroeger (Senior Solutions Consultant, Descartes)
+> Pickers spend ~55% of their time walking, shipping eats 8–12% of revenue, and one fulfillment error can cut an order's profit by 13%. Learn how smarter layout, scan-pack accuracy, rate shopping, and automation reclaim wasted time and put every order out error-free on the lowest-cost compliant service.
 ---
 
 ## Thursday, October 8, 2026 (14 sessions — fully verified Sep 29, 2026)
@@ -472,5 +626,4 @@ Speakers: Jonathan Bikowski (Director, Customer Experience, Descartes); Kieran W
 *No description published.*
 
 ---
-
 **Related:** [Event overview](README.md) · [Research notes](research-notes.md) · [Geotab session plan](geotab-mcp-session.md)
